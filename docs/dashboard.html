@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>MikeApp</title>
+        <meta name="author" content="Main Street Court" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro:400,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-ui.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <head>
+            <script src="https://js.stripe.com/v3/"></script>
+            <link rel="stylesheet" href="StripeElements.css" />
+        </head>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="site-header">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo-mikeapp-hor.svg" alt="MikeApp" />
+                    <p class="navbar-tagline">Take charge of your music career... with a little help from Mike</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="mikeicon-mobile-menu"></span>
+                </button>
+
+                <div class="navbar-mobile-actions">
+                    <div class="nav-item dropdown dropdown-other dropdown-mobile">
+                        <a class="btn btn-primary" href="#" id="newItem" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mikeicon-plus"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="newItem">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <a href="#" class="btn-closemenu" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+                        <i class="mikeicon-x"></i>
+                    </a>
+
+                    <ul class="navbar-nav navbar-nav-center mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="dashboard.html">
+                                <i class="mikeicon-home"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">
+                                <i class="mikeicon-tasks"></i>
+                                Projects
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="goals.html">
+                                <i class="mikeicon-goals"></i>
+                                Goals
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html">
+                                <i class="mikeicon-tasks"></i>
+                                Schedule
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="vault.html">
+                                <svg width="54" height="52" viewBox="0 0 54 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2 1.20225C17.54 1.86225 17 3.88725 17 5.70225V9.00225H10.955C5.869 9.00225 4.519 9.39225 2.455 11.4573C0.0519998 13.8593 0 14.2513 0 30.0023C0 45.7533 0.0519998 46.1452 2.455 48.5472L4.909 51.0023H27H49.091L51.545 48.5472C53.948 46.1452 54 45.7533 54 30.0023C54 14.2513 53.948 13.8593 51.545 11.4573C49.481 9.39225 48.131 9.00225 43.045 9.00225H37V5.70225C37 3.88725 36.46 1.86225 35.8 1.20225C34.197 -0.40075 19.803 -0.40075 18.2 1.20225ZM34 6.50225C34 8.93125 33.8 9.00225 27 9.00225C20.2 9.00225 20 8.93125 20 6.50225C20 4.07325 20.2 4.00225 27 4.00225C33.8 4.00225 34 4.07325 34 6.50225ZM10 30.0683V47.1353L7.25 46.8183L4.5 46.5023L4.223 31.0443C4.07 22.5423 4.169 15.0053 4.441 14.2943C4.714 13.5833 6.076 13.0023 7.469 13.0023H10V30.0683ZM40 30.0023V47.0023H27H14V30.0023V13.0023H27H40V30.0023ZM49.5 30.0023V46.5023L46.75 46.8183L44 47.1353V30.0023V12.8693L46.75 13.1863L49.5 13.5023V30.0023Z"/>
+                                    </svg>
+                                    
+                                    
+                                
+                                The Vault
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="social.html">
+                              <svg height="512pt" viewBox="-21 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m453.332031 85.332031c0 38.292969-31.039062 69.335938-69.332031 69.335938s-69.332031-31.042969-69.332031-69.335938c0-38.289062 31.039062-69.332031 69.332031-69.332031s69.332031 31.042969 69.332031 69.332031zm0 0"/><path d="m384 170.667969c-47.0625 0-85.332031-38.273438-85.332031-85.335938 0-47.058593 38.269531-85.332031 85.332031-85.332031s85.332031 38.273438 85.332031 85.332031c0 47.0625-38.269531 85.335938-85.332031 85.335938zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.332031 0 29.398438 23.914062 53.335938 53.332031 53.335938s53.332031-23.9375 53.332031-53.335938c0-29.394531-23.914062-53.332031-53.332031-53.332031zm0 0"/><path d="m453.332031 426.667969c0 38.289062-31.039062 69.332031-69.332031 69.332031s-69.332031-31.042969-69.332031-69.332031c0-38.292969 31.039062-69.335938 69.332031-69.335938s69.332031 31.042969 69.332031 69.335938zm0 0"/><path d="m384 512c-47.0625 0-85.332031-38.273438-85.332031-85.332031 0-47.0625 38.269531-85.335938 85.332031-85.335938s85.332031 38.273438 85.332031 85.335938c0 47.058593-38.269531 85.332031-85.332031 85.332031zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.335938 0 29.394531 23.914062 53.332031 53.332031 53.332031s53.332031-23.9375 53.332031-53.332031c0-29.398438-23.914062-53.335938-53.332031-53.335938zm0 0"/><path d="m154.667969 256c0 38.292969-31.042969 69.332031-69.335938 69.332031-38.289062 0-69.332031-31.039062-69.332031-69.332031s31.042969-69.332031 69.332031-69.332031c38.292969 0 69.335938 31.039062 69.335938 69.332031zm0 0"/><path d="m85.332031 341.332031c-47.058593 0-85.332031-38.269531-85.332031-85.332031s38.273438-85.332031 85.332031-85.332031c47.0625 0 85.335938 38.269531 85.335938 85.332031s-38.273438 85.332031-85.335938 85.332031zm0-138.664062c-29.417969 0-53.332031 23.933593-53.332031 53.332031s23.914062 53.332031 53.332031 53.332031c29.421875 0 53.335938-23.933593 53.335938-53.332031s-23.914063-53.332031-53.335938-53.332031zm0 0"/><path d="m135.703125 245.761719c-7.425781 0-14.636719-3.863281-18.5625-10.773438-5.824219-10.21875-2.238281-23.253906 7.980469-29.101562l197.949218-112.851563c10.21875-5.867187 23.253907-2.28125 29.101563 7.976563 5.824219 10.21875 2.238281 23.253906-7.980469 29.101562l-197.953125 112.851563c-3.328125 1.898437-6.953125 2.796875-10.535156 2.796875zm0 0"/><path d="m333.632812 421.761719c-3.585937 0-7.210937-.898438-10.539062-2.796875l-197.953125-112.851563c-10.21875-5.824219-13.800781-18.859375-7.976563-29.101562 5.800782-10.238281 18.855469-13.84375 29.097657-7.976563l197.953125 112.851563c10.21875 5.824219 13.800781 18.859375 7.976562 29.101562-3.945312 6.910157-11.15625 10.773438-18.558594 10.773438zm0 0"/></svg>
+                                Social
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="finances.html">
+                                <i class="mikeicon-finances"></i>
+                                Finances
+                            </a>
+                        </li>
+                       
+                       
+                        <li class="nav-item dropdown dropdown-other">
+                            <a class="nav-link" href="#" id="menuMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mikeicon-dots-v"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="menuMore">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav navbar-nav-right">
+                        <li class="nav-item nav-item-center nav-item-action">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create New...</button>
+                                <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">Task</a>
+                                    <a class="dropdown-item" href="#">Schedule</a>
+                                    <a class="dropdown-item" href="#">Goal</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropdown-user">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="avatar">NS</span>
+                            </a>
+                              <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Account settings</a>
+                             <a class="dropdown-item" href="#">Add Profile</a>
+                            <a class="dropdown-item" href="#">Inspiration</a>
+
+                             <a class="dropdown-item" href="partners.html">Our Partners</a>
+
+                           
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-item">Switch Active Profile</div>
+                            <a class="dropdown-item text-muted ml-2" href="#">Testing Slack</a>
+                            <a class="dropdown-item text-muted ml-2" href="#">Test Payments 5</a>
+                            <a class="dropdown-item" href="#">User settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Content -->
+        <main class="content">
+            <div class="container">
+                <!-- Content Header -->
+                <div class="content-head">
+                    <h1 class="band-name">Rocking Band</h1>
+                    <p class="home-text">Hey <span>Anne</span>, here's some inspiration to help you start your day well!</p>
+<div class="inspiration-wrapper-home">
+    <div class="inspiration-home">
+            "Things may come to those who wait, but <span> only </span> the things left by those who hustle."
+            <div class="inspiration__author-home">
+                - Unknown
+            </div>
+        </div>
+
+<!-- ------start loader------- -->
+<div class="inspiration__loader">    
+<div class="center">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      
+    </ul>
+</div>
+</div>
+<!-- --------end loader--------- -->
+</div>
+                </div>
+                <p class="home-text">Here's what you've got coming up</p>
+                <div class="content-body">
+                    <!-- Stats -->
+  <!-- Items List: Tasks -->
+                    <div class="list">
+                        <div class="list-head">
+                            <h3 class="m-0">
+                                <i class="mikeicon-tasks"></i>
+                                Tasks
+                            </h3>
+                            <div class="list-head-actions">
+                                <a href="#" class="btn-text btn-new mr-3" data-toggle="modal" data-target="#modal-newtask">
+                                    <i class="mikeicon-pluscircle"></i>
+                                    New Task
+                                </a>
+                                <p class="list-head-more mb-0">
+                                    <a href="#"><span class="text">See All</span><i class="mikeicon-caret-r"></i></a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="list-body">
+                            <a href="#" class="list-row list-row-link list-row-due-today" data-toggle="modal" data-target="#modal-task--view">
+                                <div class="list-col list-col-150">
+                                    <span class="badge badge-status">Due today</span>
+                                </div>
+                                <div class="list-col">
+                                    <p>Set up Facebook profile and post images</p>
+                                </div>
+                            </a>
+                            <a href="#" class="list-row list-row-link" data-toggle="modal" data-target="#modal-task--view">
+                                <div class="list-col list-col-150">
+                                    <span class="badge badge-status">04/05/2016</span>
+                                </div>
+                                <div class="list-col">
+                                    <p>Call John to set up a meeting Call John to set up a meeting Call John to set up a meeting Call John to set up a meeting Call John to set up a meeting</p>
+                                </div>
+                            </a>
+                            <div class="list-row" data-toggle="modal" data-target="#modal-task--view">
+                                <div class="list-col list-col-150">
+                                    <span class="badge badge-status">04/05/2016</span>
+                                </div>
+                                <div class="list-col">
+                                    <p>Discuss a new song with guys</p>
+                                </div>
+                            </div>
+                            <a href="#" class="list-row list-row-link list-row-overdue" data-toggle="modal" data-target="#modal-task--view">
+                                <div class="list-col list-col-150">
+                                    <span class="badge badge-status">04/05/2016</span>
+                                </div>
+                                <div class="list-col">
+                                    <p>Call John to set up a meeting Call John to set up a meeting Call John to set up a meeting Call John to set up a meeting Call John to set up a meeting</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Items List: Schedule -->
+                    <div class="list">
+                        <div class="list-head">
+                            <h3 class="m-0">
+                                <i class="mikeicon-schedule"></i>
+                                Schedule
+                            </h3>
+                            <div class="list-head-actions">
+                                <a href="#" class="btn-text btn-new mr-3" data-toggle="modal" data-target="#modal-newevent">
+                                    <i class="mikeicon-pluscircle"></i>
+                                    New Event
+                                </a>
+                                <p class="list-head-more mb-0">
+                                    13 more<span class="distancer-h">&middot;</span><a href="#"><span class="text">See All</span><i class="mikeicon-caret-r"></i></a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="list-body">
+                            <a href="#" class="list-row list-row-center list-row-link" data-toggle="modal" data-target="#modal-event--view">
+                                <div class="list-col list-col-150">
+                                    <span class="date">
+                                        <p class="date-day">15</p>
+                                        <p class="date-month">
+                                            MAY<br />
+                                            2020
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="list-col">
+                                    <p>New rehersal @ The Club</p>
+                                </div>
+                                <div class="list-col list-col-200">
+                                    <p class="font-weight-bold">John, Sean, Jenny</p>
+                                </div>
+                                <div class="list-col list-col-100 list-col-center list-col-type">
+                                    <div class="mikeicon-type-rehersal">
+                                        <img src="images/icon-type-rehearsal.png" alt="" />
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-row list-row-center list-row-link">
+                                <div class="list-col list-col-150">
+                                    <span class="date">
+                                        <p class="date-day">14</p>
+                                        <p class="date-month">
+                                            MAY<br />
+                                            2020
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="list-col">
+                                    <p>Band meeting @ Beatle Manchester</p>
+                                </div>
+                                <div class="list-col list-col-200">
+                                    <p class="font-weight-bold">Jenny, Anne</p>
+                                </div>
+                                <div class="list-col list-col-100 list-col-center list-col-type">
+                                    <div class="mikeicon-type-meeting">
+                                        <img src="images/icon-type-meeting.png" alt="" />
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-row list-row-center list-row-link">
+                                <div class="list-col list-col-150">
+                                    <span class="date">
+                                        <p class="date-day">17</p>
+                                        <p class="date-month">
+                                            MAY<br />
+                                            2020
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="list-col">
+                                    <p>New rehersal @ The Club</p>
+                                </div>
+                                <div class="list-col list-col-200">
+                                    <p class="font-weight-bold">John, Sean, Jenny</p>
+                                </div>
+                                <div class="list-col list-col-100 list-col-center list-col-type">
+                                    <div class="mikeicon-type-gig">
+                                        <img src="images/icon-type-gig.png" alt="" />
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-row list-row-center list-row-link">
+                                <div class="list-col list-col-150">
+                                    <span class="date">
+                                        <p class="date-day">17</p>
+                                        <p class="date-month">
+                                            MAY<br />
+                                            2020
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="list-col">
+                                    <p>New rehersal @ The Club</p>
+                                </div>
+                                <div class="list-col list-col-200">
+                                    <p class="font-weight-bold">John, Sean, Jenny</p>
+                                </div>
+                                <div class="list-col list-col-100 list-col-center list-col-type">
+                                    <div class="mikeicon-type-other">
+                                        <img src="images/icon-type-other.png" alt="" />
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                
+<!-- start more pages section -->
+<div class="more-pages">
+    <p class="home-text">Where should I take you next?</p>
+
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+            <a href="projects.html" class="btn btn-primary">View my Projects</a>
+        </div>
+
+         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+            <a href="goals.html" class="btn btn-primary">View my Goals</a>
+        </div>
+
+         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+            <a href="events.html" class="btn btn-primary">Manage my Schedule</a>
+        </div>
+
+         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+            <a href="finances.html" class="btn btn-primary">Manage my Finances</a>
+        </div>
+
+         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+            <a href="social.html" class="btn btn-primary">Monitor my Social Profiles</a>
+        </div>
+
+         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+            <a href="vault.html" class="btn btn-primary">Take me to The Vault</a>
+        </div>
+
+    </div>
+</div>
+<!-- end more pages section -->
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+
+        <!-- Start Task Modal -->
+        <div class="modal fade" id="modal-newtask" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">New Task</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="mikeicon-x"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form form--lined form--inputbg modal-inner">
+                            <div class="form-group mb-2">
+                                <label>Task name</label>
+                                <input class="form-control" type="text" placeholder="Enter task name" />
+                            </div>
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input type="checkbox" class="custom-control-input" id="check-highpriority" />
+                                <label class="custom-control-label" for="check-highpriority">High priority</label>
+                            </div>
+                            <div class="form-group">
+                                <label>Task description</label>
+                                <textarea class="form-control form-area" placeholder="Start typing task description..."></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-2">
+                                        <label>Due date</label>
+                                        <div class="datapicker-wrapper">
+                                            <input class="form-control form-date datepicker" type="date" placeholder="yyyy-mm-dd" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label>Assign</label>
+                                        <select class="! select" name="" id="">
+                                            <option value="" disabled selected>Select assignee</option>
+                                            <option value="">Me</option>
+                                            <option value="">Someone else</option>
+                                            <option value="">A third person</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-1">
+                                <input type="checkbox" class="custom-control-input" id="check-recurring" />
+                                <label class="custom-control-label" for="check-recurring">Recurring</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <select class="form-control select" name="" id="">
+                                            <option value="" disabled selected>Select interval</option>
+                                            <option value="">Every day</option>
+                                            <option value="">Every week</option>
+                                            <option value="">Every month</option>
+                                            <option value="">Every year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Task</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Task Modal -->
+
+        <!-- Start Event Modal -->
+        <div class="modal fade" id="modal-newevent" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">New Event</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="mikeicon-x"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form form--lined form--inputbg modal-inner">
+                            <div class="form-group mb-2">
+                                <label>Event name</label>
+                                <input class="form-control" type="text" placeholder="Enter event name" />
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <label>Event type</label>
+                                <div class="event-type-tabs">
+                                    <div class="event-tab active">Gig</div>
+                                    <div class="event-tab">Rehearsal</div>
+                                    <div class="event-tab">Meeting</div>
+                                    <div class="event-tab">Custom</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Event description</label>
+                                <textarea class="form-control form-area" placeholder="Start typing event description..."></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group mb-2">
+                                        <label>START DATE</label>
+
+                                        <div class="datapicker-wrapper">
+                                            <input class="form-control form-date datepicker" type="date" id="datepicker3" placeholder="yyyy-mm-dd" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group mb-2">
+                                        <label>Start time</label>
+                                        <div class="time-input__wrapper">
+                                            <input class="form-control" type="time" placeholder="--:--" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group mb-2">
+                                        <label>END DATE</label>
+
+                                        <div class="datapicker-wrapper">
+                                            <input class="form-control form-date datepicker" type="date" id="datepicker3" placeholder="yyyy-mm-dd" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="form-group mb-2">
+                                        <label>End time</label>
+                                        <div class="time-input__wrapper">
+                                            <input class="form-control" type="time" placeholder="--:--" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <label>Location</label>
+                                <div class="location-wrapper">
+                                    <input class="form-control" type="text" placeholder="Enter location" />
+                                </div>
+                            </div>
+                            <div class="form-group mb-2">
+                                <label>ADDRESS</label>
+                                <input class="form-control" type="text" placeholder="Tap to find the address" />
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>STATUS</label>
+                                        <select class="form-control select" name="" id="">
+                                            <option value="" disabled selected>Select status</option>
+                                            <option value="">Tentative</option>
+                                            <option value="">Confirmed</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group mb-2">
+                                        <label>INCOME</label>
+                                        <input class="form-control" type="text" placeholder="0" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Notes</label>
+                                <textarea class="form-control form-area" placeholder="Add optional notes"></textarea>
+                            </div>
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Event</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Event Modal -->
+
+        <!--  ----start task view------ -->
+        <div class="modal fade" id="modal-task--view" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog--view-task">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">View Task</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="mikeicon-x"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form form--lined form--inputbg modal-inner">
+                            <div class="form-group mb-2">
+                                <label>Task name</label>
+                                <input class="form-control" type="text" placeholder="Enter task name" value="My task" readonly />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Task description</label>
+                                <textarea class="form-control form-area" placeholder="Start typing task description..." value="" readonly>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ipsam ducimus, facilis numquam itaque sapiente alias. .
+                                </textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-2">
+                                        <label>Due date</label>
+
+                                        <input class="form-control form-date datapicker" type="text" id="datepicker2" placeholder="yyyy-mm-dd" value="31.07.2020" readonly="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label>Assign</label>
+                                        <input class="form-control" type="text" placeholder="" value="Me" readonly />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input type="checkbox" class="custom-control-input" id="check-highpriority" readonly checked />
+                                <label class="custom-control-label" for="check-highpriority">High priority</label>
+                            </div>
+
+                            <div class="form-group text-center mt-4 modal-buttons modal-buttons--view">
+                                <button type="button" class="btn btn-primary btn-wide m-1">Edit Task</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------end task view------------ -->
+
+        <!--  ----start event view------ -->
+        <div class="modal fade" id="modal-event--view" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Event</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="mikeicon-x"></i>
+                        </button>
+                    </div>
+                    <div class="event-modal__map-wrapper">
+                        <div id="googleMap"></div>
+                        <div class="event-modal__header-content">
+                            <h4 class="event-modal__title">Meeting to discuss summer touring plans</h4>
+                            <div class="event-modal__separator"></div>
+                            <div class="event-modal__location">
+                                The Rock Cafe, 25 New St, London
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-modal__header-buttons">
+                        <button class="event-modal__header-button-cancel event-modal__header-button">
+                            <img src="images/close.svg" alt="" />
+                        </button>
+                        <button class="event-modal__header-button-check event-modal__header-button">
+                            <img src="images/tick.svg" alt="" />
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="event-modal__item">
+                            <label for="">STARTING</label>
+                            <span> 22 June 2020, <span class="event-modal__time">5:04</span></span>
+                        </div>
+                        <div class="event-modal__item">
+                            <label for="">Ending</label>
+                            <span> 29 June 2020, <span class="event-modal__time">10:04</span></span>
+                        </div>
+                        <div class="event-modal__item">
+                            <label for="">Type</label>
+                            <span>Gig</span>
+                        </div>
+                        <div class="event-modal__item">
+                            <label for="">STATUS</label>
+                            <span>Confirmed</span>
+                        </div>
+                        <div class="event-modal__item">
+                            <label for="">Description</label>
+                            <span>Let's rock a bit</span>
+                        </div>
+                        <div class="event-modal__item">
+                            <label for="">Income</label>
+                            <span>2,0</span>
+                        </div>
+                        <div class="event-modal__item">
+                            <label for="">Going</label>
+                            <span>-</span>
+                        </div>
+                        <div class="event-modal__item">
+                            <label for="">Not Going</label>
+                            <span>-</span>
+                        </div>
+                        <div class="event-modal__item">
+                            <label for="">Notes <span class="add-notes">+</span></label>
+                            <span class="notes-list">
+                                <span class="notes-list__item notes-list__item--hidden">
+                                    <span class="notes-list__item-text">
+                                        <span class="foorm-group">
+                                            <form
+                                                action="
+                                    "
+                                                class="form form--inputbg form--lined"
+                                            >
+                                                <input class="form-control" type="text" placeholder="Enter your note" />
+                                            </form>
+                                        </span>
+                                    </span>
+                                    <span class="add-notes__footer">
+                                        <button class="btn btn-transparent-white btn--cancel">
+                                            Cancel
+                                        </button>
+                                        <button class="btn btn-transparent-white">
+                                            Save
+                                        </button>
+                                    </span>
+                                </span>
+                                <span class="notes-list__item">
+                                    <span class="notes-list__item-header">
+                                        <span class="notes-list__item-author">
+                                            Sonny
+                                        </span>
+                                        <span class="notes-list__dot"></span>
+                                        <span class="notes-list__item-date">
+                                            Aug 15, 2020
+                                        </span>
+                                    </span>
+                                    <span class="notes-list__item-text">
+                                        This is right guy for venues. He told me he can help with Cherry. Call him.
+                                    </span>
+                                    <span class="notes-item__close">
+                                        +
+                                    </span>
+                                </span>
+                                <span class="notes-list__item">
+                                    <span class="notes-list__item-header">
+                                        <span class="notes-list__item-author">
+                                            Elen
+                                        </span>
+                                        <span class="notes-list__dot"></span>
+                                        <span class="notes-list__item-date">
+                                            Jul 15, 2020
+                                        </span>
+                                    </span>
+                                    <span class="notes-list__item-text">
+                                        I agree, nicely done.
+                                    </span>
+                                    <span class="notes-item__close">
+                                        +
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="form-group text-center mt-4 modal-buttons modal-buttons--view">
+                            <button type="button" class="btn btn-primary btn-wide m-1">Edit Event</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------end event view------------ -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="modal-newgoal" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog--goal">
+                <div class="modal-content">
+                    <div class="modal-header modal-header--goals">
+                        <h5 class="modal-title" id="staticBackdropLabel">New Goal</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="mikeicon-x"></i>
+                        </button>
+                    </div>
+                    <p class="modal-sub-title">Sent a goal you want to reach and track your progress</p>
+                    <div class="modal-body">
+                        <form class="form form--lined form--inputbg modal-inner">
+                            <div class="form-group mb-2">
+                                <label>goal type</label>
+                                <select class="form-control select" name="" id="">
+                                    <option value="" disabled selected>Select goal type</option>
+                                    <option value="">Twitter Followers</option>
+                                    <option value="">Facebook Likes</option>
+                                    <option value="">Instagram Followers</option>
+                                    <option value="">YouTube Views</option>
+                                    <option value="">Gigs</option>
+                                    <option value="">Profit</option>
+                                    <option value="">SoundCloud Plays</option>
+                                    <option value="">LoudUp Connections</option>
+                                </select>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label>Target value</label>
+                                        <input class="form-control" type="text" placeholder="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-2">
+                                        <label>target date</label>
+                                        <div class="datapicker-wrapper">
+                                            <input class="form-control form-date datepicker" type="date" placeholder="yyyy-mm-dd" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label>Initial value</label>
+                                        <input class="form-control" type="text" placeholder="0" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Goal</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p class="m-0 text-muted">&copy; 2020 MikeApp</p>
+                <div class="footer__links-to-app">
+                    <a href=""><img src="images/appstore.png" alt="" /></a>
+                    <a href=""><img src="images/googleplay.png" alt="" /></a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/prefixfree.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>

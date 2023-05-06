@@ -1,0 +1,897 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>MikeApp</title>
+    <meta name="author" content="Main Street Court">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<!-- ---------start prompt-------------- -->
+<!-- <div class="prompt">
+    
+    <div class="prompt__text">
+       Please, select a task to add a note to it
+    </div>
+    <div class="prompt__close">+</div>
+</div> -->
+<!-- ---------end prompt--------------- -->
+
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo-mikeapp-hor.svg" alt="MikeApp">
+                <p class="navbar-tagline">Take charge of your music career... with a little help from Mike</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mikeicon-mobile-menu"></span>
+            </button>
+
+            <div class="navbar-mobile-actions">
+                <div class="nav-item dropdown dropdown-other dropdown-mobile">
+                    <a class="btn btn-primary" href="#" id="newItem" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mikeicon-plus"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="newItem">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <a href="#" class="btn-closemenu" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+                    <i class="mikeicon-x"></i>
+                </a>
+
+                <ul class="navbar-nav navbar-nav-center mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">
+                            <i class="mikeicon-home"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="projects.html">
+                            <i class="mikeicon-tasks"></i>
+                           Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">
+                            <i class="mikeicon-tasks"></i>
+                            Schedule
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="finances.html">
+                            <i class="mikeicon-finances"></i>
+                            Finances
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="goals.html">
+                            <i class="mikeicon-goals"></i>
+                            Goals
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="social.html">
+                              <svg height="512pt" viewBox="-21 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m453.332031 85.332031c0 38.292969-31.039062 69.335938-69.332031 69.335938s-69.332031-31.042969-69.332031-69.335938c0-38.289062 31.039062-69.332031 69.332031-69.332031s69.332031 31.042969 69.332031 69.332031zm0 0"/><path d="m384 170.667969c-47.0625 0-85.332031-38.273438-85.332031-85.335938 0-47.058593 38.269531-85.332031 85.332031-85.332031s85.332031 38.273438 85.332031 85.332031c0 47.0625-38.269531 85.335938-85.332031 85.335938zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.332031 0 29.398438 23.914062 53.335938 53.332031 53.335938s53.332031-23.9375 53.332031-53.335938c0-29.394531-23.914062-53.332031-53.332031-53.332031zm0 0"/><path d="m453.332031 426.667969c0 38.289062-31.039062 69.332031-69.332031 69.332031s-69.332031-31.042969-69.332031-69.332031c0-38.292969 31.039062-69.335938 69.332031-69.335938s69.332031 31.042969 69.332031 69.335938zm0 0"/><path d="m384 512c-47.0625 0-85.332031-38.273438-85.332031-85.332031 0-47.0625 38.269531-85.335938 85.332031-85.335938s85.332031 38.273438 85.332031 85.335938c0 47.058593-38.269531 85.332031-85.332031 85.332031zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.335938 0 29.394531 23.914062 53.332031 53.332031 53.332031s53.332031-23.9375 53.332031-53.332031c0-29.398438-23.914062-53.335938-53.332031-53.335938zm0 0"/><path d="m154.667969 256c0 38.292969-31.042969 69.332031-69.335938 69.332031-38.289062 0-69.332031-31.039062-69.332031-69.332031s31.042969-69.332031 69.332031-69.332031c38.292969 0 69.335938 31.039062 69.335938 69.332031zm0 0"/><path d="m85.332031 341.332031c-47.058593 0-85.332031-38.269531-85.332031-85.332031s38.273438-85.332031 85.332031-85.332031c47.0625 0 85.335938 38.269531 85.335938 85.332031s-38.273438 85.332031-85.335938 85.332031zm0-138.664062c-29.417969 0-53.332031 23.933593-53.332031 53.332031s23.914062 53.332031 53.332031 53.332031c29.421875 0 53.335938-23.933593 53.335938-53.332031s-23.914063-53.332031-53.335938-53.332031zm0 0"/><path d="m135.703125 245.761719c-7.425781 0-14.636719-3.863281-18.5625-10.773438-5.824219-10.21875-2.238281-23.253906 7.980469-29.101562l197.949218-112.851563c10.21875-5.867187 23.253907-2.28125 29.101563 7.976563 5.824219 10.21875 2.238281 23.253906-7.980469 29.101562l-197.953125 112.851563c-3.328125 1.898437-6.953125 2.796875-10.535156 2.796875zm0 0"/><path d="m333.632812 421.761719c-3.585937 0-7.210937-.898438-10.539062-2.796875l-197.953125-112.851563c-10.21875-5.824219-13.800781-18.859375-7.976563-29.101562 5.800782-10.238281 18.855469-13.84375 29.097657-7.976563l197.953125 112.851563c10.21875 5.824219 13.800781 18.859375 7.976562 29.101562-3.945312 6.910157-11.15625 10.773438-18.558594 10.773438zm0 0"/></svg>
+                                Social
+                            </a>
+                        </li>
+                    <li class="nav-item dropdown dropdown-other">
+                        <a class="nav-link" href="#" id="menuMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mikeicon-dots-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="menuMore">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item nav-item-center nav-item-action">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create New...</button>
+                            <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right">
+                              <a class="dropdown-item" href="#">Task</a>
+                              <a class="dropdown-item" href="#">Schedule</a>
+                              <a class="dropdown-item" href="#">Goal</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown dropdown-user">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="avatar">NS</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Account settings</a>
+                            <a class="dropdown-item" href="#">User settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Content -->
+    <main class="content">
+
+        <div class="container">
+
+            <!-- Content Header -->
+            <div class="content-head">
+                <h1>Rocking Band</h1>
+                <p>Member Name</p>
+            </div>
+
+            <div class="content-body">
+
+
+                <div class="tabs-header">
+
+                    <!-- Nav tabs -->
+                    <div class="actions float-right">
+                        <a href="#" class="btn-text btn-new" data-toggle="modal" data-target="#modal-newtask">
+                            <i class="mikeicon-pluscircle"></i>
+                            New Task
+                        </a>
+                        <div class="dropdown ml-3">
+                            <a class="btn-text-simple dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mikeicon-filter"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right dropdown-menu--filter" aria-labelledby="filterDropdown ">
+                                <a class="dropdown-item dropdown-item--all" href="#">All items</a>
+                                <a class="dropdown-item" href="#">Filter #1</a>
+                                <a class="dropdown-item" href="#">Filter #2</a>
+                                <a class="dropdown-item" href="#">Filter #3</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-tabs nav-tabs-simple nav-tabs-tasks" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pending-tab" data-toggle="tab" href="#pending" role="tab" aria-controls="pending" aria-selected="true">Pending<span class="d-none d-lg-inline"> Tasks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="completed-tab" data-toggle="tab" href="#completed" role="tab" aria-controls="completed" aria-selected="false">Completed<span class="d-none d-lg-inline"> Tasks</span></a>
+                        </li>
+                    </ul>
+
+                </div>
+                
+                <!-- Tab panes -->
+                <div class="tab-content">
+
+                    <!-- Pending Tasks -->
+                    <div class="tab-pane fade show active" id="pending" role="tabpanel" aria-labelledby="pending-tab">
+
+                        <!-- Items List: Up Next -->
+                        <div class="list">
+
+                            <div class="list-head">
+                                <h3 class="m-0">
+                                    Up Next
+                                </h3>
+                            </div>
+
+                            <div class="list-body">
+                                <a href="#" class="list-row list-row-link list-row-due-today">
+                                    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-newtask--edit">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </span>  
+                                         <span class="list-row__menu-dropdown-item list-row__menu--clone">
+                                            <img src="images/sheet.svg" alt="" class="">
+                                            <span>
+                                            Copy</span>
+                                         </span>
+                                         <span class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-task--view">
+
+
+                                         
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        
+                                        </span> 
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+                                        
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+                                    <div class="list-col list-col-200">
+                                        <p class="due">Due <span class="text-due-today">Today</span></p>
+                                    </div>
+                                    <div class="list-col">
+                                        <p>Set up Facebook profile and post images</p>
+                                    </div>
+                                    <div class="list-col list-col-200">
+
+                                    </div>
+                                    <div class="list-col list-col-100 text-center list-col-status">
+                                        <span class="list-check">
+                                            <i class="mikeicon-checkmark"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-row list-row-link">
+                                    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-newtask--edit">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </span>  
+                                         <span class="list-row__menu-dropdown-item list-row__menu--clone">
+                                            <img src="images/sheet.svg" alt="" class="">
+                                            <span>
+                                            Copy</span>
+                                         </span> <span class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-task--view">
+
+
+                                         
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        
+                                        </span>
+                                        <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span> 
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+                                    <div class="list-col list-col-200">
+                                        <p class="due">Due <span class="">Tomorrow</span></p>
+                                    </div>
+                                    <div class="list-col">
+                                        <p>Call John to set up a meeting</p>
+                                    </div>
+                                    <div class="list-col list-col-200 list-col-right">
+                                        <span class="badge badge-user">
+                                            <i class="mikeicon-user"></i>
+                                            George
+                                        </span>
+                                        <i class="mikeicon-repeating-event"></i>
+                                    </div>
+                                    <div class="list-col list-col-100 text-center list-col-status">
+                                        <span class="list-check">
+                                            <i class="mikeicon-checkmark"></i>
+                                        </span>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="list-row list-row-link list-row-overdue">
+                                    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-newtask--edit">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </span>  
+                                         <span class="list-row__menu-dropdown-item list-row__menu--clone">
+                                            <img src="images/sheet.svg" alt="" class="">
+                                            <span>
+                                            Copy</span>
+                                         </span> <span class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-task--view">
+
+
+                                         
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        
+                                        </span> 
+                                        <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+                                    <div class="list-col list-col-200">
+                                        <p class="due"><span class="text-overdue">Overdue</span></p>
+                                    </div>
+                                    <div class="list-col">
+                                        <p>Set up Facebook profile and post images</p>
+                                    </div>
+                                    <div class="list-col list-col-200">
+
+                                    </div>
+                                    <div class="list-col list-col-100 text-center list-col-status">
+                                        <span class="list-check">
+                                            <i class="mikeicon-checkmark"></i>
+                                        </span>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="list-row list-row-link list-row--priority">
+                                    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-newtask--edit">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </span>  
+                                         <span class="list-row__menu-dropdown-item list-row__menu--clone">
+                                            <img src="images/sheet.svg" alt="" class="">
+                                            <span>
+                                            Copy</span>
+                                         </span> <span class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-task--view">
+
+
+                                         
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        
+                                        </span> 
+                                        <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+                                         
+                                        </span>
+                                                                              
+                                    </span>
+
+                                    <div class="list-col list-col-200">
+                                        <p class="due">Due <span>Tomorrow</span></p>
+                                    </div>
+                                    <div class="list-col">
+                                        <p>Call sis to set up a gig</p>
+                                    </div>
+                                    <div class="list-col list-col-200 list-col-right">
+                                        <i class="mikeicon-repeating-event"></i>
+                                    </div>
+                                    <div class="list-col list-col-100 text-center list-col-status">
+                                        <span class="list-check">
+                                            <i class="mikeicon-checkmark"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-row list-row-link list-row-completed">
+                                    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-newtask--edit">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </span>  
+                                         <span class="list-row__menu-dropdown-item list-row__menu--clone">
+                                            <img src="images/sheet.svg" alt="" class="">
+                                            <span>
+                                            Copy</span>
+                                         </span>
+                                        <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span> 
+                                        <span class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-task--view">
+
+
+                                         
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        
+                                        </span>  
+                                        </span>
+                                                                              
+                                    </span>
+                                    <div class="list-col list-col-200">
+                                        <p class="due">Due <span>Tomorrow</span></p>
+                                    </div>
+                                    <div class="list-col">
+                                        <p>Call John to set up a meeting, not sure where</p>
+                                    </div>
+                                    <div class="list-col list-col-200 list-col-right">
+                                        <i class="mikeicon-repeating-event"></i>
+                                    </div>
+                                    <div class="list-col list-col-100 text-center list-col-status">
+                                        <span class="list-check list-check-filled">
+                                            <i class="mikeicon-checkmark"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- Items List: Next 7 days -->
+                        <div class="list">
+
+                            <div class="list-head">
+                                <h3 class="m-0">
+                                    Next 7 Days
+                                </h3>
+                            </div>
+
+                            <div class="list-body">
+                                <a href="#" class="list-row list-row-link">
+                                    <div class="list-col list-col-200">
+                                        <p class="due">Due <span>05/06/2020</span></p>
+                                    </div>
+                                    <div class="list-col">
+                                        <p>Set up Facebook profile and post images</p>
+                                    </div>
+                                    <div class="list-col list-col-200">
+
+                                    </div>
+                                    <div class="list-col list-col-100 text-center list-col-status">
+                                        <span class="list-check">
+                                            <i class="mikeicon-checkmark"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-row list-row-link">
+                                    <div class="list-col list-col-200">
+                                        <p class="due">Due <span>12/08/2020</span></p>
+                                    </div>
+                                    <div class="list-col">
+                                        <p>Call John to set up a meeting</p>
+                                    </div>
+                                    <div class="list-col list-col-200 list-col-right">
+                                        <span class="badge badge-user mr-3">
+                                            <i class="mikeicon-user"></i>
+                                            George
+                                        </span>
+                                        <i class="mikeicon-repeating-event"></i>
+                                    </div>
+                                    <div class="list-col list-col-100 text-center list-col-status">
+                                        <span class="list-check">
+                                            <i class="mikeicon-checkmark"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-row list-row-link">
+                                    <div class="list-col list-col-200">
+                                        <p class="due">Due <span>03/04/2020</span></p>
+                                    </div>
+                                    <div class="list-col">
+                                        <p>Call sis to set up a gig</p>
+                                    </div>
+                                    <div class="list-col list-col-200 list-col-right">
+                                        <i class="mikeicon-repeating-event"></i>
+                                    </div>
+                                    <div class="list-col list-col-100 text-center list-col-status">
+                                        <span class="list-check">
+                                            <i class="mikeicon-checkmark"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Completed Tasks -->
+                    <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
+
+                        <div class="list-body">
+                            <a href="#" class="list-row list-row-link list-row-completed">
+                                <div class="list-col list-col-200">
+                                    <p class="due">Due <span>Today</span></p>
+                                </div>
+                                <div class="list-col">
+                                    <p>Set up Facebook profile and post images</p>
+                                </div>
+                                <div class="list-col list-col-200">
+
+                                </div>
+                                <div class="list-col list-col-100 text-center list-col-status">
+                                    <span class="list-check list-check-filled">
+                                        <i class="mikeicon-checkmark"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="#" class="list-row list-row-link list-row-completed">
+                                <div class="list-col list-col-200">
+                                    <p class="due">Due <span>Today</span></p>
+                                </div>
+                                <div class="list-col">
+                                    <p>Call John to set up a meeting</p>
+                                </div>
+                                <div class="list-col list-col-200 list-col-right">
+                                    <span class="badge badge-user mr-3">
+                                        <i class="mikeicon-user"></i>
+                                        George
+                                    </span>
+                                    <i class="mikeicon-repeating-event"></i>
+                                </div>
+                                <div class="list-col list-col-100 text-center list-col-status">
+                                    <span class="list-check list-check-filled">
+                                        <i class="mikeicon-checkmark"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="#" class="list-row list-row-link list-row-completed">
+                                <div class="list-col list-col-200">
+                                    <p class="due">Due <span>Tomorrow</span></p>
+                                </div>
+                                <div class="list-col">
+                                    <p>Call sis to set up a gig</p>
+                                </div>
+                                <div class="list-col list-col-200 list-col-right">
+                                    <i class="mikeicon-repeating-event"></i>
+                                </div>
+                                <div class="list-col list-col-100 text-center list-col-status">
+                                    <span class="list-check list-check-filled">
+                                        <i class="mikeicon-checkmark"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="#" class="list-row list-row-link list-row-completed">
+                                <div class="list-col list-col-200">
+                                    <p class="due">Due <span>Tomorrow</span></p>
+                                </div>
+                                <div class="list-col">
+                                    <p>Call John to set up a meeting, not sure where</p>
+                                </div>
+                                <div class="list-col list-col-200 list-col-right">
+                                    <i class="mikeicon-repeating-event"></i>
+                                </div>
+                                <div class="list-col list-col-100 text-center list-col-status">
+                                    <span class="list-check list-check-filled">
+                                        <i class="mikeicon-checkmark"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p class="m-0 text-muted">&copy; 2020 MikeApp</p>
+        </div>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-newtask" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <!-- <div class="modal-window__loader modal-window__loader-task">
+            <img src="images/loader.svg" alt="">
+            Creating a new task
+        </div> -->
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">New Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form form--lined form--inputbg modal-inner">
+
+                         <div class="form-group mb-2">
+                            <label>Project name</label>
+                            <select class="form-control select" name="" id="">
+<!-- <option value="" disabled selected>Select project</option> -->
+                                 <optgroup label="Open Projects">
+                                        
+                                        <option value="">Project 1</option>
+
+                                        <option value="">Project 2</option>
+                                   
+                                </optgroup>
+
+                                 <optgroup label="Completed Projects">
+                                        
+                                        <option value="">Project 3</option>
+
+                                      
+                                </optgroup>
+
+                                    </select>
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label>Task name</label>
+                            <input class="form-control" type="text" placeholder="Enter task name">
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="check-highpriority">
+                            <label class="custom-control-label" for="check-highpriority">High priority</label>
+                        </div>
+
+                         
+                        <div class="form-group">
+                            <label>Task description</label>
+                            <textarea class="form-control form-area" placeholder="Start typing task description..."></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-2">
+                                    <label>Due date</label>
+                                  <div class="datapicker-wrapper">
+                                            <input class="form-control form-date datepicker" type="date" placeholder="yyyy-mm-dd" />
+                                        </div>
+                                    
+
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                    <label>Assign</label>
+                                    <select class="form-control select" name="" id="">
+                                        <option value="" disabled selected>Select assignee</option>
+                                        <option value="">Me</option>
+                                        <option value="">Someone else</option>
+                                        <option value="">A third person</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-1">
+                            <input type="checkbox" class="custom-control-input" id="check-recurring">
+                            <label class="custom-control-label" for="check-recurring">Recurring</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control select" name="" id="">
+                                        <option value="" disabled selected>Select interval</option>
+                                        <option value="">Every day</option>
+                                        <option value="">Every week</option>
+                                        <option value="">Every month</option>
+                                        <option value="">Every year</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                             
+
+                        </div>
+                        <div class="form-group text-center mt-4 modal-buttons">
+                            <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary btn-wide m-1">Create Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="modal fade" id="modal-newtask--edit" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Edit Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form form--lined form--inputbg modal-inner">
+                        <div class="form-group mb-2">
+                            <label>Project name</label>
+                            <select class="form-control select" name="" id="">
+<!-- <option value="" disabled selected>Select project</option> -->
+                                 <optgroup label="Open Projects">
+                                        
+                                        <option value="">Project 1</option>
+
+                                        <option value="">Project 2</option>
+                                   
+                                </optgroup>
+
+                                 <optgroup label="Completed Projects">
+                                        
+                                        <option value="">Project 3</option>
+
+                                      
+                                </optgroup>
+
+                                    </select>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>Task name</label>
+                            <input class="form-control" type="text" placeholder="Enter task name">
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="check-highpriority">
+                            <label class="custom-control-label" for="check-highpriority">High priority</label>
+                        </div>
+                        
+                            
+                     
+                        <div class="form-group">
+                            <label>Task description</label>
+                            <textarea class="form-control form-area" placeholder="Start typing task description..."></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-2">
+                                    <label>Due date</label>
+                                   <div class="datapicker-wrapper">
+                                            <input class="form-control form-date datepicker" type="date" placeholder="yyyy-mm-dd" />
+                                        </div>
+                                    
+
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                    <label>Assign</label>
+                                    <select class="form-control select" name="" id="">
+                                        <option value="" disabled selected>Select assignee</option>
+                                        <option value="">Me</option>
+                                        <option value="">Someone else</option>
+                                        <option value="">A third person</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-1">
+                            <input type="checkbox" class="custom-control-input" id="check-recurring">
+                            <label class="custom-control-label" for="check-recurring">Recurring</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control select" name="" id="">
+                                        <option value="" disabled selected>Select interval</option>
+                                        <option value="">Every day</option>
+                                        <option value="">Every week</option>
+                                        <option value="">Every month</option>
+                                        <option value="">Every year</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                             
+
+                        </div>
+                        <div class="form-group text-center mt-4 modal-buttons">
+                            <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary btn-wide m-1">Edit Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--  ----start task view------ -->
+<div class="modal fade" id="modal-task--view" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">View Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form form--lined form--inputbg modal-inner">
+                        <div class="form-group mb-2">
+                            <label>Project name</label>
+                           <input class="form-control" type="text" placeholder="" value="Project 1" readonly>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>Task name</label>
+                            <input class="form-control" type="text" placeholder="Enter task name" value="My task" readonly>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Task description</label>
+                            <textarea class="form-control form-area" placeholder="Start typing task description..." value="" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ipsam ducimus, facilis numquam itaque sapiente alias. .</textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-2">
+                                    <label>Due date</label>
+                                    
+                                        <div class="datapicker-wrapper">
+                                            <input class="form-control form-date datepicker" type="date" placeholder="yyyy-mm-dd" value="2020.08.08" readonly/>
+                                        </div>                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                    <label>Assign</label>
+                                     <input class="form-control" type="text" placeholder="" value="Me" readonly> 
+                                </div>
+                            </div>
+                        </div>
+
+
+<div class="row">
+                           
+                           
+                        </div>
+
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="check-highpriority" readonly checked>
+                            <label class="custom-control-label" for="check-highpriority">High priority</label>
+                        </div>
+                        
+                        <div class="form-group text-center mt-4 modal-buttons modal-buttons--view">
+                            
+                            <button type="button" class="btn btn-primary btn-wide m-1">Edit Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ----------end task view------------ -->
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

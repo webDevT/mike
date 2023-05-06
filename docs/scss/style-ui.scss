@@ -1,0 +1,186 @@
+@import '_header.scss';
+@import '_mixins.scss';
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-head;
+    font-weight: 400;
+}
+.btn {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.btn-primary,
+.btn-primary:focus {
+    background-color: $color-brand;
+    color: #fff;
+    &:hover {
+        background-color: lighten($color-brand, 5%);
+        color: #fff;
+    }
+}
+.btn-new {
+    text-transform: uppercase;
+    border: none;
+    font-weight: 700;
+    font-size: .9rem;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    &:hover {
+        color: #fff;
+    }
+    i {
+        margin-right: 6px;
+        position: relative;
+        top: -1px;
+    }
+    @include mediaMax($breakpoint-md) {
+        font-size: .8rem;
+        i {
+            top: 0;
+        }
+        .hidden-label {
+            display: none;
+        }
+    }
+}
+.btn-text-simple,
+.btn-text-simple:focus {
+    color: rgba(255,255,255,.8);
+    &:hover {
+        color: #fff;
+    }
+    i {
+        font-size: .9rem;
+    }
+}
+.mikeicon-type-rehersal {
+    color: $color-rehersal;
+}
+.mikeicon-type-meeting {
+    color: $color-meeting;
+}
+
+.content {
+    padding-top: $navbar-height;
+    @include mediaMax($breakpoint-md) {
+        padding-top: $navbar-height-mobile;
+    }
+}
+.content-head {
+    padding: 20px;
+    text-align: center;
+    h1 {
+        margin: 0;
+        line-height: 1.2em;
+        font-size: 2rem;
+    }
+    p {
+        margin: 0;
+        margin-top: 6px;
+    }
+    @include mediaMax($breakpoint-md) {
+        h1 {
+            font-size: 1.7rem;
+        }
+        p {
+            margin-top: 2px;
+        }
+    }
+}
+
+.stats {
+    display: flex;
+    margin-bottom: $vertical-el-distance;
+    @include mediaMax($breakpoint-sm) {
+        flex-direction: column;
+    }
+}
+.stat {
+    flex: 1;
+    background-color: rgba(0,0,0,.15);
+    padding: 12px 40px;
+    display: inline-flex;
+    align-items: center;
+    &+.stat {
+        margin-left: 10px;
+        @include mediaMax($breakpoint-sm) {
+            margin-top: 5px;
+            margin-left: 0;
+        }
+    }
+    @include mediaMax($breakpoint-md) {
+        padding: 10px 16px;
+    }
+}
+.stat-link {
+    display: inline-flex;
+    color: #fff;
+    position: relative;
+    &:hover {
+        background-color: rgba(0,0,0,.25);
+        color: #fff;
+        .stat-desc {
+            color: #fff;
+        }
+        &::after {
+            right: 14px;
+            opacity: .65;
+        }
+    }
+    &::after {
+        content: "\e911";
+        line-height: 1em;
+        font-size: .8rem;
+        font-family: $iconfont;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -4px;
+        opacity: .3;
+        transition: .35s ease-out;
+    }
+}
+.stat-val {
+    margin: 0;
+    font-family: $font-head;
+    font-size: 2rem;
+    flex: 0 0 auto;
+    margin-right: 20px;
+    position: relative;
+    top: -1px;
+    @include mediaMax($breakpoint-md) {
+        font-size: 1.7rem;
+        margin-right: 8px;
+    }
+}
+.stat-desc {
+    color: rgba(255,255,255,.65);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    flex: 1 1 auto;
+    margin: 0;
+    font-size: .9rem;
+    transition: .2s all;
+    @include mediaMax($breakpoint-md) {
+        font-size: .8rem;
+    }
+}
+.actions {
+    display: flex;
+    align-items: center;
+}
+.tabs-header {
+    position: relative;
+    .actions {
+        position: absolute;
+        right: 0;
+        padding-top: 10px;
+    }
+}
+
+.nav-tabs-tasks {
+    @include mediaMax($breakpoint-md) {
+        justify-content: flex-start;
+    }
+}

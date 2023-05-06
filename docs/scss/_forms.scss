@@ -1,0 +1,298 @@
+
+
+/* Forms */
+.form {
+
+    .form-control,
+    .select2 {
+      transition: $transnormal;
+      font-size: 1.1em;
+      box-shadow: none;
+      border-radius: 3px;
+      border: 1px solid rgba($color-dkgrey, .12);
+      height: 38px;
+      color: $color-dkgrey;
+      box-shadow: 0 2px 6px rgba($color-dkgrey, .05);
+  
+      &:focus {
+        border-color: #8798A3;
+        box-shadow: none;
+      }
+  
+      &.form-area {
+        height: auto;
+      }
+      
+      &::-webkit-input-placeholder {
+        color: rgba($color-muted, .5);
+      }
+      &::-moz-placeholder {
+        color: rgba($color-muted, .5);
+      }
+      &:-ms-input-placeholder {
+        color: rgba($color-muted, .5);
+      }
+      &:-moz-placeholder {
+        color: rgba($color-muted, .5);
+      }
+  
+      option {
+        color: #222;
+      }
+    }
+  
+    .form-group {
+  
+      > label {
+        font-weight: 400;
+        font-size: 14px;
+        color: $color-muted;
+        margin-bottom: 6px;
+      }
+  
+      .form__error {
+        display: none;
+        font-size: 13px;
+        padding: 4px 0;
+        color: $color-red;
+      }
+    }
+    .has-error {
+      .form-control,
+      .select2 {
+        border-color: $color-red;
+      }
+      .form__error {
+        display: block;
+      }
+    }
+    .help-block {
+      font-size: 13px;
+      color: rgba($color-dark, .55);
+      margin-top: 7px;
+    } 
+  }
+  .form--lined {
+    .form-control,
+    .select2 {
+      background-color: transparent;
+      border-radius: 0;
+      padding-left: 0;
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255,.55);
+      box-shadow: none;
+      color: #fff;
+      &:focus {
+        border-bottom-color: rgba(255,255,255,.9);
+        box-shadow: 0 1px 0 rgba(255,255,255,.9);
+      }
+      &::-webkit-input-placeholder {
+        color: rgba(255,255,255,.35);
+      }
+      &::-moz-placeholder {
+        color: rgba(255,255,255,.35);
+      }
+      &:-ms-input-placeholder {
+        color: rgba(255,255,255,.35);
+      }
+      &:-moz-placeholder {
+        color: rgba(255,255,255,.35);
+      }
+
+      
+    }
+  }
+
+.login input {
+  -webkit-box-shadow: inset 0 0 0 50px #313140 !important;
+  -webkit-text-fill-color: #fff;
+}
+  
+  .form-prefix {
+    position: relative;
+  
+    .form-control,
+    .select2 {
+      padding-left: 35px !important;
+    }
+    .form__picto {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      opacity: .35;
+      transform: translateY(-50%);
+      font-size: .85em;
+    }
+  }
+  .form-sufix {
+    position: relative;
+  
+    .form-control,
+    .select2 {
+      padding-right: 45px !important;
+    }
+    .form__picto {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      opacity: .35;
+      transform: translateY(-50%);
+      font-size: .85em;
+    }
+}
+.form--lined {
+    .form-prefix {
+      .form__picto {
+        left: 0;
+        width: 15px;
+        text-align: center;
+      }
+      .form-control,
+      .select2 {
+        padding-left: 30px !important;
+      }
+    }
+    .form-sufix {
+      .form__picto {
+        right: 0;
+        width: 15px;
+        text-align: center;
+      }
+      .form-control,
+      .select2 {
+        padding-right: 30px !important;
+      }
+    }
+  }
+  .form-text {
+    color: rgba($color-muted, 1) !important;
+    font-size: 14px;
+    line-height: 1.2em;
+    margin-top: .6rem;
+  }
+  .custom-checkbox {
+    .custom-control-label {
+      &::before {
+        background-color: rgba($color-dkgrey, .15);
+        border: 1px solid rgba(255,255,255,.5);
+        border-radius: 2px;
+        transition: .2s all;
+      }
+    }
+    .custom-control-input {
+      &:checked {
+        &~.custom-control-label {
+          &::before {
+            background-color: $color-brand;
+            box-shadow: none;
+            border: none;
+          }
+        }
+      }
+      &:focus {
+        &~.custom-control-label {
+          &::before {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+}
+
+.form--inputbg {
+    .form-control,
+    .select2 {
+        background-color: rgba(0,0,0,.12);
+        padding-left: 12px;
+        padding-right: 12px;
+        &:focus {
+            background-color: rgba(0,0,0,.20);
+        }
+    }
+}
+
+//select style 
+.select2-container--classic .select2-results__option--highlighted.select2-results__option--selectable {
+background-color: rgba(0, 0, 0, 0.25) !important;
+color: #000;
+
+}
+.select2-container--classic .select2-results__option--highlighted.select2-results__option--selectable:hover {
+  color: #fff;
+}
+.select2-results__option--selectable {
+  color: #fff;
+
+}
+.select2-results__option {
+  padding-left: 13px !important;
+}
+.select2-container--classic .select2-selection--single .select2-selection__arrow {
+  background: transparent !important;
+}
+
+.select2-container--classic .select2-selection--single .select2-selection__arrow b {
+  border: none !important;
+}
+.select2-container--classic .select2-selection--single .select2-selection__arrow {
+  border-left: none !important;
+  position: absolute !important;
+  height: 100% !important; 
+  display: flex;
+  align-items: center;
+}
+.select2-container--classic .select2-selection--single .select2-selection__arrow:before {
+  content: "\e911";
+  line-height: 1em;
+  font-size: .8rem;
+  font-family: "mikeicon";
+  transform: rotate(90deg);
+  position: absolute;
+}
+.select2.select2-container.select2-container--classic {
+  display: block;
+  height: calc(2.25rem + 2px);
+ 
+}
+.select2-selection__rendered {
+  display: flex !important; 
+  align-items: center !important;
+  height: 100% !important;
+  color: #fff !important;
+}
+.select2-search--dropdown input {
+  display: none;
+}
+.select2-selection.select2-selection--single {
+  height: 100% !important; 
+  background: transparent !important;
+  border: none !important;
+}
+.select2-selection__rendered {
+  padding-left: 0 !important;;
+  padding-right: 0 !important;
+}
+.select2-results__options {
+  background: #20202B;
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.1);
+}
+.select2-search--dropdown {
+  display: none !important;
+}
+.select2-container--classic.select2-container--open .select2-dropdown {
+  border: none !important;
+}
+
+.form-control[readonly],
+input[readonly] {
+  background: transparent;
+  background-image: none;
+}
+.form-control[readonly]:focus,
+input[readonly]:focus {
+  background: transparent;
+  background-image: none;
+}
+.select2-container--classic .select2-results__option--highlighted[aria-selected] {
+  background: rgba(0, 0, 0, 0.25) !important;
+}

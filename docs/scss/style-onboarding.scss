@@ -1,0 +1,125 @@
+@import '_variables.scss';
+
+/* Onboarding */
+.onboarding {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 0 25px;
+    padding-bottom: 35px;
+    h4 {
+        font-family: $font-head;
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+}
+.onboarding__content {
+    width: 100%;
+    max-width: 360px;
+}
+.btn-group--large {
+    .btn {
+        font-size: 1.2em;
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+}
+.btn-group--type {
+    .btn {
+        flex: 1;
+    }
+}
+
+.plans {
+    display: grid;
+    grid-gap: 20px;
+    margin-top: 35px;
+}
+.plan {
+    border: 1px solid rgba(255,255,255,.85);
+    border-radius: 12px;
+    color: #fff;
+    background-color: $color-dkgrey;
+    display: flex;
+    flex-direction: column;
+    &:hover {
+        color: #fff;
+        box-shadow: inset 0 0 0 1px #fff, 0 10px 35px rgba(0,0,0,.2);
+    }
+    h5 {
+        font-family: $font-head;
+        font-weight: 400;
+        font-size: 1.6rem;
+       line-height: 1.2em;
+       margin-bottom: 5px; 
+    }
+}
+.plan__head {
+    padding: 15px 30px;
+    padding-top: 30px;
+    text-align: center;
+    position: relative;
+    flex: 0 0 auto;
+}
+.plan__price {
+    font-size: 1.1rem;
+}
+.plan__save {
+    background-color: #7DC9DF;
+    font-family: $font-head;
+    position: absolute;
+    right: -8px;
+    padding: 3px 6px;
+    width: 60px;
+    text-align: left;
+    transform: skew(-4deg);
+    p {
+        line-height: 1em;
+        margin: 0;
+    }
+    small {
+        display: block;
+    }
+}
+.plan__body {
+    padding: 0 35px;
+    flex: 1 1 auto;
+    p {
+        opacity: .8;
+        font-size: .9rem;
+    }
+}
+.plan__foot {
+    padding: 15px 30px;
+    padding-bottom: 25px;
+    flex: 0 0 auto;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .onboarding {
+        padding: 0;
+        h4 {
+            font-size: 1.8rem;
+        }
+    }
+    .plans {
+        grid-template-columns: 1fr 1fr;
+        margin-left: -185px;
+    }
+    .plan {
+        width: 360px;
+    }
+    .plan__body {
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+
+@media screen and (max-height: 750px)
+{
+    
+
+}

@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>MikeApp</title>
+        <meta name="author" content="Main Street Court" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro:400,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-ui.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/magnific-popup.css">
+    </head>
+
+    <body>
+      
+
+        <!-- Content -->
+        <main class="">
+            <div class="container">
+                <!-- Content Header -->
+                <div class="content-head">
+                    <h1>The Vault</h1>
+                 
+                </div>
+
+             <div class="vault-content">
+                   <div class="dropdown ml-3 vault-content__filter">
+                                <a class="btn-text-simple dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="mikeicon-filter"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right dropdown-menu--filter" aria-labelledby="filterDropdown ">
+                                    <span class="dropdown-item dropdown-item--all dropdown-item--tag">FILTER BY TAG</span>
+                                    <a class="dropdown-item" href="#">Tag 1</a>
+                                    <a class="dropdown-item" href="#">Tag 2</a>
+                                    <a class="dropdown-item" href="#">My tag</a>
+                                    <a class="dropdown-item" href="#">Tag 4</a>
+                                     <a class="dropdown-item" href="#">Some text</a>
+                                </div>
+                            </div>
+                 <div class="vault__tabs">
+                     <div class="vault-tab">
+                         All
+                     </div>
+                     <div class="vault-tab">
+                         Text
+                     </div>
+                     <div class="vault-tab">
+                         Audio
+                     </div>
+                     <div class="vault-tab">
+                         File
+                     </div>
+                     <div class="vault-tab">
+                         Image
+                     </div>
+                 </div>
+<div class="vault-content__add-note">
+                        
+                            <a href="" class="add-note__img" data-toggle="modal" data-target="#modal-add-text-note">
+                          <img src="images/vault-icon-write-small.png" alt=""> </a>
+
+                          <a href="" class="add-note__input" data-toggle="modal" data-target="#modal-add-text-note">
+
+                          <input type="text" placeholder="Start typing your note..."></a>
+
+<span class="valute__empty__item--audio valute__item--audio">
+<img src="images/vault-icon-record-small.png" alt=""></span>
+                          
+                        
+
+                            <a href="" class="add-note__img"  data-toggle="modal" data-target="#modal-add-photo-note">
+                               <img src="images/vault-icon-photo-small.png" alt=""></a>
+                               <a href="" class="add-note__img"  data-toggle="modal" data-target="#modal-add-file-note">
+                          <img src="images/vault-icon-attach-small.png" alt=""></a>
+                       
+                         
+                     </div>
+
+                 <div class="vault__tab-content">
+
+
+                     <div class="vault__tab-item">
+                         <div class="vault-item vault-item--text">
+                            <div class="vault-item__left">
+                                <div class="vault-item__img">
+                                <img src="images/vault-icon-write-small.png" alt=""> 
+                             </div>
+
+                             <div class="vault-item__content">
+                                 <div class="vault-item__title">
+                                    <img src="images/icon-lock.png" alt=""> Note title
+                                 </div>
+                                 <div class="vault-item__date">
+                                     TODAY
+                                 </div>
+                             </div>
+                            </div>
+                             <span class="list-row__menu list-row__menu--vault">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown list-row__menu-dropdown--event">
+
+                                          <a href="" class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-edit-text-note">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </a>  
+                                        
+                                         <a href="" class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-view-text-note">  
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        </a> 
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+
+                                        <span class="list-row__menu-dropdown-item list-row__menu--add-link" data-toggle="modal" data-target="#modal-add-link">
+                                        <img src="images/link.svg" alt="" class=""> 
+                                        <span>Add link</span>
+                                        
+                                        </span>
+
+                                         <span class="list-row__menu-dropdown-item list-row__menu--manage-links"  data-toggle="modal" data-target="#modal-manage-link">
+                                        <img src="images/server.svg" alt="" class=""> 
+                                        <span>Manage links</span>
+                                        
+                                        </span>
+
+
+
+                                    
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                         </div>  
+
+
+  <div class="vault-item vault-item--audio">
+                            <div class="vault-item__left">
+                                <div class="vault-item__img">
+                                <img src="images/vault-icon-record-small.png" alt=""> 
+                             </div>
+
+                             <div class="vault-item__content">
+                                 <div class="vault-item__title">
+                                     Note title
+                                 </div>
+                                 <div class="vault-item__date">
+                                     TODAY
+                                 </div>
+                             </div>
+                            </div>
+                             <span class="list-row__menu list-row__menu--vault">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown list-row__menu-dropdown--event">
+
+                                          <a href="" class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-audio-photo-note">
+                                            
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </a>  
+                                        
+                                         <a href="" class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-audio-photo-note">  
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        </a> 
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+
+                                        <span class="list-row__menu-dropdown-item list-row__menu--add-link" data-toggle="modal" data-target="#modal-add-link">
+                                        <img src="images/link.svg" alt="" class=""> 
+                                        <span>Add link</span>
+                                        
+                                        </span>
+
+                                         <span class="list-row__menu-dropdown-item list-row__menu--manage-links"  data-toggle="modal" data-target="#modal-manage-link">
+                                        <img src="images/server.svg" alt="" class=""> 
+                                        <span>Manage links</span>
+                                        
+                                        </span>
+
+
+
+                                    
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                         </div> 
+
+
+
+                           <div class="vault-item vault-item--photo">
+                            <div class="vault-item__left">
+                                <div class="vault-item__img">
+                                <img src="images/vault-icon-photo-small.png" alt=""> 
+                             </div>
+
+                             <div class="vault-item__content">
+                                 <div class="vault-item__title">
+                                     Note title
+                                 </div>
+                                 <div class="vault-item__date">
+                                     TODAY
+                                 </div>
+                             </div>
+                            </div>
+                              <span class="list-row__menu list-row__menu--vault">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown list-row__menu-dropdown--event">
+
+                                          <a href="" class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-view-photo-note">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </a>  
+                                        
+                                         <a href="" class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-view-photo-note">  
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        </a> 
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+
+                                        <span class="list-row__menu-dropdown-item list-row__menu--add-link" data-toggle="modal" data-target="#modal-add-link">
+                                        <img src="images/link.svg" alt="" class=""> 
+                                        <span>Add link</span>
+                                        
+                                        </span>
+
+                                         <span class="list-row__menu-dropdown-item list-row__menu--manage-links"  data-toggle="modal" data-target="#modal-manage-link">
+                                        <img src="images/server.svg" alt="" class=""> 
+                                        <span>Manage links</span>
+                                        
+                                        </span>
+
+
+
+                                    
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                         </div>
+
+                           <div class="vault-item vault-item--file">
+                            <div class="vault-item__left">
+                                <div class="vault-item__img">
+                                <img src="images/vault-icon-attach-small.png" alt=""> 
+                             </div>
+
+                             <div class="vault-item__content">
+                                 <div class="vault-item__title">
+                                     PDF from Android
+                                 </div>
+                                 <div class="vault-item__date">
+                                     TODAY
+                                 </div>
+                             </div>
+                            </div>
+                            <span class="list-row__menu list-row__menu--vault">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown list-row__menu-dropdown--event">
+
+                                          <a href="" class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-view-file-note">
+
+
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </a>  
+                                        
+                                         <a href="" class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-view-file-note">  
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        </a> 
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+
+                                        <span class="list-row__menu-dropdown-item list-row__menu--add-link" data-toggle="modal" data-target="#modal-add-link">
+                                        <img src="images/link.svg" alt="" class=""> 
+                                        <span>Add link</span>
+                                        
+                                        </span>
+
+                                         <span class="list-row__menu-dropdown-item list-row__menu--manage-links"  data-toggle="modal" data-target="#modal-manage-link">
+                                        <img src="images/server.svg" alt="" class=""> 
+                                        <span>Manage links</span>
+                                        
+                                        </span>
+
+
+
+                                    
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                         </div>
+
+                          <div class="vault-item vault-item--file">
+                            <div class="vault-item__left">
+                                <div class="vault-item__img">
+                                <img src="images/vault-icon-attach-small.png" alt=""> 
+                             </div>
+
+                             <div class="vault-item__content">
+                                 <div class="vault-item__title">
+                                     Image from android
+                                 </div>
+                                 <div class="vault-item__date">
+                                     TODAY
+                                 </div>
+                             </div>
+                            </div>
+                            <span class="list-row__menu list-row__menu--vault">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown list-row__menu-dropdown--event">
+
+                                          <a href="" class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-view-file-note">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </a>  
+                                        
+                                         <a href="" class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-view-file-note">  
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        </a> 
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+
+                                        <span class="list-row__menu-dropdown-item list-row__menu--add-link" data-toggle="modal" data-target="#modal-add-link">
+                                        <img src="images/link.svg" alt="" class=""> 
+                                        <span>Add link</span>
+                                        
+                                        </span>
+
+                                         <span class="list-row__menu-dropdown-item list-row__menu--manage-links"  data-toggle="modal" data-target="#modal-manage-link">
+                                        <img src="images/server.svg" alt="" class=""> 
+                                        <span>Manage links</span>
+                                        
+                                        </span>
+
+
+
+                                    
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                         </div>
+
+
+
+                          <div class="vault-item vault-item--file">
+                            <div class="vault-item__left">
+                                <div class="vault-item__img">
+                                <img src="images/vault-icon-attach-small.png" alt=""> 
+                             </div>
+
+                             <div class="vault-item__content">
+                                 <div class="vault-item__title">
+                                    
+                                     Audio file from iOS
+                                 </div>
+                                 <div class="vault-item__date">
+                                     TODAY
+                                 </div>
+                             </div>
+                            </div>
+                              <span class="list-row__menu list-row__menu--vault">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown list-row__menu-dropdown--event">
+
+                                          <a href="" class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-view-file-note">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </a>  
+                                        
+                                         <a href="" class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-view-file-note">  
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        </a> 
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+
+                                        <span class="list-row__menu-dropdown-item list-row__menu--add-link" data-toggle="modal" data-target="#modal-add-link">
+                                        <img src="images/link.svg" alt="" class=""> 
+                                        <span>Add link</span>
+                                        
+                                        </span>
+
+                                         <span class="list-row__menu-dropdown-item list-row__menu--manage-links"  data-toggle="modal" data-target="#modal-manage-link">
+                                        <img src="images/server.svg" alt="" class=""> 
+                                        <span>Manage links</span>
+                                        
+                                        </span>
+
+
+
+                                    
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                         </div>
+
+                     </div>
+
+
+                     <div class="vault__tab-item">
+                          <div class="vault-item vault-item--text">
+                            <div class="vault-item__left">
+                                <div class="vault-item__img">
+                                <img src="images/vault-icon-write-small.png" alt=""> 
+                             </div>
+
+                             <div class="vault-item__content">
+                                 <div class="vault-item__title">
+                                     Note title
+                                 </div>
+                                 <div class="vault-item__date">
+                                     TODAY
+                                 </div>
+                             </div>
+                            </div>
+                              <span class="list-row__menu list-row__menu--vault">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown list-row__menu-dropdown--event">
+
+                                          <a href="" class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-edit-text-note">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </a>  
+                                        
+                                         <a href="" class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-view-text-note">  
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        </a> 
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+
+                                        <span class="list-row__menu-dropdown-item list-row__menu--add-link" data-toggle="modal" data-target="#modal-add-link">
+                                        <img src="images/link.svg" alt="" class=""> 
+                                        <span>Add link</span>
+                                        
+                                        </span>
+
+                                         <span class="list-row__menu-dropdown-item list-row__menu--manage-links"  data-toggle="modal" data-target="#modal-manage-link">
+                                        <img src="images/server.svg" alt="" class=""> 
+                                        <span>Manage links</span>
+                                        
+                                        </span>
+
+
+
+                                    
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                         </div>  
+                     </div>
+                     <div class="vault__tab-item">
+
+                        <div class="list-row--empty">
+                                
+
+                                <div class="list-row--empty__text">
+                                    You don't have any matching items
+                                </div>
+                               
+                            </div>
+                          
+
+                         </div>
+                     </div>
+                     <div class="vault__tab-item">
+                        <div class="vault-item vault-item--file">
+                            <div class="vault-item__left">
+                                <div class="vault-item__img">
+                                <img src="images/vault-icon-attach-small.png" alt=""> 
+                             </div>
+
+                             <div class="vault-item__content">
+                                 <div class="vault-item__title">
+                                     Note title
+                                 </div>
+                                 <div class="vault-item__date">
+                                     TODAY
+                                 </div>
+                             </div>
+                            </div>
+                           <span class="list-row__menu list-row__menu--vault">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown list-row__menu-dropdown--event">
+
+                                          <a href="" class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-view-file-note">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </a>  
+                                        
+                                         <a href="" class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-view-file-note">  
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        </a> 
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+
+                                        <span class="list-row__menu-dropdown-item list-row__menu--add-link" data-toggle="modal" data-target="#modal-add-link">
+                                        <img src="images/link.svg" alt="" class=""> 
+                                        <span>Add link</span>
+                                        
+                                        </span>
+
+                                         <span class="list-row__menu-dropdown-item list-row__menu--manage-links"  data-toggle="modal" data-target="#modal-manage-link">
+                                        <img src="images/server.svg" alt="" class=""> 
+                                        <span>Manage links</span>
+                                        
+                                        </span>
+
+
+
+                                    
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                         </div>
+
+
+
+                     
+
+
+                    
+                 </div>
+
+                  <div class="vault__tab-item">
+                          <div class="vault-item vault-item--photo">
+                            <div class="vault-item__left">
+                                <div class="vault-item__img">
+                                <img src="images/vault-icon-photo-small.png" alt=""> 
+                             </div>
+
+                             <div class="vault-item__content">
+                                 <div class="vault-item__title">
+                                     Note title
+                                 </div>
+                                 <div class="vault-item__date">
+                                     TODAY
+                                 </div>
+                             </div>
+                            </div>
+                             <span class="list-row__menu list-row__menu--vault">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown list-row__menu-dropdown--event">
+
+                                          <a href="" class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-view-photo-note">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </a>  
+                                        
+                                         <a href="" class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-view-photo-note">  
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        </a> 
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+
+                                        <span class="list-row__menu-dropdown-item list-row__menu--add-link" data-toggle="modal" data-target="#modal-add-link">
+                                        <img src="images/link.svg" alt="" class=""> 
+                                        <span>Add link</span>
+                                        
+                                        </span>
+
+                                         <span class="list-row__menu-dropdown-item list-row__menu--manage-links"  data-toggle="modal" data-target="#modal-manage-link">
+                                        <img src="images/server.svg" alt="" class=""> 
+                                        <span>Manage links</span>
+                                        
+                                        </span>
+
+
+
+                                    
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+                        
+                         
+                     </div>
+
+
+                     
+
+
+                    
+                 </div>
+             </div>
+
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <p class="m-0 text-muted">&copy; 2020 MikeApp</p>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+  
+<!-- --------------start record audio modal-----------------> 
+<div class="record-audio-modal">
+    <div class="record-audio-modal__content">
+        <div class="close">+</div>
+        <div class="record-audio-modal__title">
+            RECORD AUDIO
+        </div>
+        <div class="record-audio-modal__icon">
+            <img src="images/mic.png" alt="" class="">
+
+              
+        </div>
+
+        <div class="record-audio-modal__text">
+            <span class="no-active">Press start to recording...</span>
+            <span class="active">Recording...</span>
+            
+        </div>
+
+        <div class="record-audio-modal__time">
+            00:00/01:00
+        </div>
+        <button class="btn btn-brand btn-record">
+            <span class="start">START</span>
+            <a href="" class="finish" data-toggle="modal" data-target="#modal-add-audio-note">FINISH</a>
+            
+        </button>
+
+
+
+    </div>
+</div>
+<!-- ------------------end record audio modal-------------------- -->
+
+<!-- -----------------------start add link popup----------------------- -->
+<div class="modal fade" id="modal-add-link" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--add-link">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Please select</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form form--lined form--inputbg modal-inner">
+                   
+                       
+                    
+                        
+                        <div class="form-group text-center mt-4 add-link__buttons">
+                              <button type="button" class="btn bth--transparent btn-wide m-1"><a href="task-list.html">Link to a task</a></button>
+                            <button type="button" class="btn bth--transparent btn-wide m-1"><a href="events-list.html">Link to an event</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------end add link popup----------------------- -->
+
+<!-- -----------------------start manage link popup----------------------- -->
+<div class="modal fade" id="modal-manage-link" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--add-link">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Please select</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form form--lined form--inputbg modal-inner">
+                   
+                       
+                    
+                        
+                        <div class="form-group text-center mt-4 add-link__buttons manage-links__buttons">
+                              <button type="button" class="btn bth--transparent btn-wide m-1"><a href="task-links.html">Open list links to a task</a></button>
+                            <button type="button" class="btn bth--transparent btn-wide m-1"><a href="event-links.html">Open list links to an event</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------end manage link popup----------------------- -->
+
+<!-- -----------------------start add text-note popup----------------------- -->
+<div class="modal fade" id="modal-add-text-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                            <div class="form-group">
+                                <label>Note description</label>
+                                <textarea class="form-control form-area" placeholder="Start typing your note..."></textarea>
+
+                                <button class="btn bth--transparent dictate-note" disabled>
+
+                                    <span class="active">SPEAC NOW...</span>
+                                    <span class="no-active">DICTATE NOTE</span>
+                                     <img src="images/vault-icon-record-small.png" alt="">
+                                     <img src="images/mute.svg" alt="" class="no-active">
+
+                                </button>
+                                <div class="dictate-note__prompt">
+                                    The function of Recording Note is supported only by the Chrome browser.
+                                </div>
+                            </div>                                         
+                            
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Add Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" />
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group tag-input">
+    <input type="text" class="form-control pull-right search" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list" class="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------end add text note popup----------------------- -->
+
+
+
+
+
+<!-- -------------------start add photo-note popup----------------------- -->
+<div class="modal fade" id="modal-add-photo-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                             <div class="form-group">
+                                
+
+                                <!-- <div class="browse-file">
+                                    <label>Please select a file to upload</label>
+                                    <input type="file" name="file" id="file" class="inputfile btn-browse-input" />
+<label for="file" class="btn bth--transparent btn-browse">BROWSE FILE</label>   
+                                </div> -->
+<div class="browse-file__title browse-img__title">Please select a picture to upload</div>
+                                <button type="button" class="btn btn-primary btn-wide m-1 new-income__btn add-new__photo browse-file__btn" download>                                     
+                                       <input type="file" name="file" id="file" class="inputfile" />
+<label for="file"> Choose a picture</label>                                   
+                                    </button>
+                      <div class="browse-file__content browse-img__content">
+                         <a href="images/todo.png" class="popup-link browse-file__wrapper">
+                                <img src="images/vault-btn-photo.png" alt="">
+                               image.jpeg
+                                
+                   
+                </a>
+                         
+                          
+                      </div>                        
+                            </div>                                        
+                            
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Add Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" />
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group tag-input">
+    <input type="text" class="form-control pull-right search" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list" class="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------end add photo note popup----------------------- -->
+
+
+<!-- -------------------start add file-note popup----------------------- -->
+<div class="modal fade" id="modal-add-file-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                             <div class="form-group">
+                                
+
+                                <!-- <div class="browse-file">
+                                    <label>Please select a file to upload</label>
+                                    <input type="file" name="file" id="file" class="inputfile btn-browse-input" />
+<label for="file" class="btn bth--transparent btn-browse">BROWSE FILE</label>   
+                                </div> -->
+<div class="browse-file__title browse-doc__title">Please select a file to upload</div>
+                                <button type="button" class="btn btn-primary btn-wide m-1 new-income__btn browse-file__btn add-new-file" download>                                     
+                                       <input type="file" name="file" id="file" class="inputfile" />
+<label for="file"> BROWSE FILE</label>                                   
+                                    </button>
+                      <div class="browse-file__content browse-doc__content">
+                           <a href="images/wof-brief.pdf" class="browse-file__wrapper popup-file-link">
+                                <img src="images/vault-file-pdf.png" alt="">
+                                <span class="note-image-view__title">
+                                    Text-file-name.pdf
+                                </span>
+                                <span class="note-image-view__weight">
+                                    260.5 KB
+                                </span>
+                               
+                                
+                   
+                </a>
+                      </div>                        
+                            </div>                                         
+                            
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Add Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" />
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group tag-input">
+    <input type="text" class="form-control pull-right search" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list" class="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ------------------start add file note popup------------------ -->
+
+
+<!-- -------------------start add audio-note popup----------------------- -->
+<div class="modal fade" id="modal-add-audio-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                           <div class="audio-note__content">
+                    <div class="audio-buttons">
+                    <img src="images/vault-btn-play.png" alt="" class="play">
+                    <img src="images/vault-btn-pause.png" alt="" class="pause">
+                </div>
+                <div class="audio-time">
+                    00:00
+                </div>
+                </div>                                        
+                            
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Add Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" />
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper ">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group tag-input">
+    <input type="text" class="form-control pull-right search" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list" class="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ------------------start add audio note popup------------------ -->
+
+<!-- -----------------------start edit text-note popup----------------------- -->
+<div class="modal fade" id="modal-edit-text-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Edit note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                            <div class="form-group">
+                                <label>Note description</label>
+                                <textarea class="form-control form-area" placeholder="Start typing your note...">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deserunt dignissimos nulla voluptates fuga, natus voluptatum tempora deleniti cum inventore ducimus iusto numquam at ipsa facilis voluptate a praesentium.</textarea>
+
+                                <button class="btn bth--transparent dictate-note">
+
+                                    <span class="active">SPEAC NOW...</span>
+                                    <span class="no-active">DICTATE NOTE</span>
+                                     <img src="images/vault-icon-record-small.png" alt="">
+                                </button>
+                            </div>                                         
+                            
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Edit Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" value="My first note"/>
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper ">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group tag-input">
+    <input type="text" class="form-control pull-right search" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list" class="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------end edit text note popup----------------------- -->
+
+<!-- -----------------------start viev text-note popup----------------------- -->
+<div class="modal fade" id="modal-view-text-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                            <div class="note-view">
+                    <div class="note-view__header">
+     <div class="note-view__title">
+             My test note
+         </div>
+
+          <div class="note-view__date">
+             29.07.2020
+         </div>
+</div>
+               
+
+        
+
+         <div class="note-view__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deserunt dignissimos nulla voluptates fuga, natus voluptatum tempora deleniti cum inventore ducimus iusto numquam at ipsa facilis voluptate a praesentium. Consequatur laboriosam nostrum unde repellendus omnis aperiam, amet illo tempora suscipit, est veritatis in tempore quae nihil labore error, cum deleniti?
+         </div>
+
+         
+ </div>                                        
+                            
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Edit Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" value="My first note"/>
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group tag-input">
+    <input type="text" class="form-control pull-right search" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list" class="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------end view text note popup----------------------- -->
+
+<!-- -----------------------start view file note popup----------------------- -->
+<div class="modal fade" id="modal-view-file-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                            <div class="note-view">
+                    <div class="note-view__header note-view__header--file">
+     <div class="note-view__title">
+             My test note
+         </div>
+
+          <div class="note-view__date">
+             29.07.2020
+         </div>
+</div>
+
+ <div class="note-image-view">
+                         <a href="images/wof-brief.pdf" class="browse-file__wrapper popup-file-link">
+                                <img src="images/vault-file-pdf.png" alt="">
+                                <span class="note-image-view__title">
+                                    Text-file-name.pdf
+                                </span>
+                                <span class="note-image-view__weight">
+                                    260.5 KB
+                                </span>
+                               
+                                
+                   
+                </a>
+                         
+                          
+                      </div> 
+ </div>                                      
+                            
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Edit Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" value="My first note"/>
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper ">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group tag-input">
+    <input type="text" class="form-control pull-right search" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list" class="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------end view file note popup----------------------- -->
+
+
+<!-- -----------------------start view photo note popup----------------------- -->
+<div class="modal fade" id="modal-view-photo-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                         <div class="note-view">
+                    <div class="note-view__header note-view__header--file">
+     <div class="note-view__title">
+             My test note
+         </div>
+
+          <div class="note-view__date">
+             29.07.2020
+         </div>
+</div>
+
+ <div class="note-image-view">
+                         <a href="images/todo.png" class="popup-link browse-file__wrapper">
+                                <img src="images/vault-btn-photo.png" alt="">
+                                <span class="note-image-view__title">
+                                    Image.jpeg
+                                </span>
+                                <span class="note-image-view__weight">
+                                    60.5 KB
+                                </span>
+                               
+                                
+                   
+                </a>
+                         
+                          
+                      </div> 
+               
+ </div>                                     
+                            
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Edit Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" value="My first note"/>
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper ">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group tag-input">
+    <input type="text" class="form-control pull-right search" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list" class="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------end photo file note popup----------------------- -->
+
+
+<!-- -----------------------start view audio note popup----------------------- -->
+<div class="modal fade" id="modal-audio-photo-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                           <div class="audio-note__content">
+                    <div class="audio-buttons">
+                    <img src="images/vault-btn-play.png" alt="" class="play">
+                    <img src="images/vault-btn-pause.png" alt="" class="pause">
+                </div>
+                <div class="audio-time">
+                    00:00
+                </div>
+                </div>                                    
+                            
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Edit Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" value="My first note"/>
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper ">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group tag-input">
+    <input type="text" class="form-control pull-right search" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list" class="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------end audio file note popup----------------------- -->
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+         <script src="js/jquery.magnific-popup.min.js"></script>
+         <script>
+      $(document).ready(function(){
+            $(".search").keyup(function(){
+                _this = this;
+                $.each($(".tag-list li"), function() {
+                    if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+                       $(this).hide();
+
+                    else
+                       $(this).show();  
+
+
+                });
+
+
+                 $.each($(".tag-list"), function() {
+                    if($(this, 'li').text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+                       $('.tag-empty').addClass('active');
+                    else
+                       
+                   $('.tag-empty').removeClass('active');
+
+
+                                    
+                });
+
+
+            });
+
+
+          
+        });   
+        </script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/prefixfree.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>

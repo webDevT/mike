@@ -1,0 +1,43 @@
+
+/* ---- Theme Variables ---- */
+
+/* Font */
+$font: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-head: Oswald, Helvetica Neue, Helvetica, Arial, sans-serif;
+$iconfont: 'mikeicon';
+
+/* Colors */
+$color-brand: #E4662A;
+$color-brand-alt: #AA883C;
+
+$color-grey: #000;
+$color-dkgrey: #313140;
+
+$color-dark: #262D39;
+$color-bg: #ECEDEF;
+$color-action: #72D7E9;
+
+$color-muted: #78778E;
+
+$color-red: #F24738;
+$color-green: #00C853;
+
+$color-rehersal: #2E7692;
+$color-meeting: #7646AA;
+
+/* Transitions */
+$transnormal: all .2s linear;
+$transfine: all 350ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+
+/* Element radius */
+$radius-element: 4px;
+$radius-button: 30px;
+
+$color-navbar-bg: #20202B;
+$navbar-height: 70px;
+$navbar-height-mobile: 56px;
+$vertical-el-distance: 40px;
+
+$breakpoint-xl: 1200px;
+$breakpoint-md: 992px;
+$breakpoint-sm: 767px;

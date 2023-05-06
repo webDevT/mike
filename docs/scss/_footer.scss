@@ -1,0 +1,26 @@
+/*---- Footer ----*/
+.site-footer {
+    padding-top: 60px;
+    padding-bottom: 25px;
+    font-size: .85rem;
+}
+.footer__links-to-app {
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 10px;
+	}
+	img {
+		width: 120px;
+	}
+}
+.footer__links-to-app {
+	display: flex;
+}
+
+.site-footer .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

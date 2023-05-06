@@ -1,0 +1,197 @@
+/* Buttons */
+.btn {
+    transition: $transnormal;
+    text-decoration: none;
+    border: none;
+    border-radius: $radius-button;
+    padding: 16px 32px;
+    font-size: 13px;
+    line-height: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    &:hover {
+      text-decoration: none;
+      border: none;
+    }
+    &:focus {
+      outline: none !important;
+    }
+}
+
+
+  
+.btn-default {
+    background-color: rgba(255,255,255,.35);
+    color: $color-dkgrey;
+    &:hover {
+      background-color: #fff;
+      color: $color-brand;
+    }
+}
+.btn-primary,
+.btn-primary:focus {
+      background-color: #fff;
+      color: #000;
+      position: relative;
+      overflow: hidden;
+  
+      &:hover {
+        background-color: #fff;
+        color: #000;
+        transition-delay: .1s;
+      }
+}
+.btn-outline,
+.btn-outline:focus {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,.5);
+    color: rgba(255,255,255,.5);
+    &:hover {
+        box-shadow: inset 0 0 0 2px #fff !important;
+        color: #fff;
+        box-shadow: none;
+    }
+}
+.btn-brand,
+.btn-brand:focus {
+      background-color: $color-brand;
+      color: #fff;
+      &:hover {
+        background-color: lighten($color-brand, 5%);
+        color: #fff;
+      }
+}
+.btn-wide {
+    @include mediaMin($breakpoint-sm) {
+        min-width: 180px;
+    }
+}
+.btn-text {
+    border-bottom: 1px solid rgba($color-brand, .35);
+    &:hover {
+      color: $color-dkgrey;
+      border-bottom-color: transparent;
+    }
+}
+.btn-text-white {
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,.35);
+    &:hover {
+      color: $color-brand;
+      border-bottom-color: transparent;
+    }
+}
+.text-muted {
+    .btn-text-white {
+      color: rgba(255,255,255,.55);
+      &:hover {
+        color: $color-brand;
+        border-bottom-color: transparent;
+      }
+    }
+}
+.btn-withicon {
+    i {
+      margin-right: 6px;
+      position: relative;
+      font-size: .9em;
+      top: 1px;
+    }
+}
+.btn-withlasticon {
+    i {
+      margin-left: 8px;
+      position: relative;
+      max-height: 33px;
+      top: 1px;
+      margin-top: -2px;
+      margin-bottom: -2px;
+      transition: .2s ease-out;
+      display: inline-block;
+    }
+    .mikeicon-arrow,
+    .mikeicon-arrow-alt {
+      font-size: .7em;
+      position: relative;
+      top: -1px;
+    }
+    &:hover {
+      .mikeicon-arrow,
+      .mikeicon-arrow-alt {
+        transform: translateX(5px);
+      }
+    }
+  }
+  
+  .btn-group {
+    .btn--outline {
+      &.active {
+        background-color: rgba(255,255,255,.75);
+        color: $color-dkgrey;
+      }
+    }
+}
+
+.bth--transparent {
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  display: block;
+  margin: 0 auto;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 16px 32px;
+  font-size: 13px;
+  line-height: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  min-width: 230px;
+}
+.bth--transparent:hover {
+  background: $color-brand;
+  border: 1px solid $color-brand;
+
+}
+.btn-transparent-white {
+  background: transparent;
+  border: 2px solid #fff;
+}
+.btn-transparent-white:hover {
+  background: #fff;
+  border: 2px solid #fff;
+  color: #313140;
+}
+.notes-list__item--hidden {
+  display: none;
+}
+.btn--brand {
+  background: $color-brand;
+}
+.social-back-button.btn-outline {
+  display: flex; 
+  align-items: center;
+  padding-left: 0px;
+  padding-right: 0px !important;
+  width: 100px;
+  border: none;
+  box-shadow: none;
+  margin-top: 10px;
+  display: none;
+  svg {
+    width: 13px;  
+    margin-right: 6px;
+    fill: rgba(#fff, 0.5) !important;
+    transition: all .5s;
+  
+}
+}
+.social-back-button.btn-outline:hover {
+  box-shadow: none !important;
+  border: none !important;
+  svg {
+    fill: #fff !important;
+  }
+}

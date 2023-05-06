@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>MikeApp</title>
+        <meta name="author" content="Main Street Court" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-onboarding.css" />
+    </head>
+
+    <body>
+        <button class="close-page"></button>
+        <!-- Badn Setup -->
+        <main class="">
+            <div class="container">
+                <div class="page__branding">
+                    <img src="images/logo-mikeapp.svg" alt="MikeApp" />
+                </div>
+
+                <div class="members">
+                    <div class="account-setting__content">
+                        <div class="setting-form">
+                            <h1 class="members__title">Account setting</h1>
+                            <form class="form form--lined form--inputbg">
+                                <div class="form-group mb-2">
+                                    <label>First name</label>
+                                    <input class="form-control" type="text" placeholder="Enter your name" value="John" />
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label>Last name</label>
+                                    <input class="form-control" type="text" placeholder="Enter your lastname" value="Doe" />
+                                </div>
+                                <div class="form-group mb-2" data-toggle="modal" data-target="#password-modal">
+                                    <label>Email</label>
+                                    <input class="form-control" type="email" placeholder="Enter your password" value="testemail@gmail.com" />
+                                </div>
+
+                                <div class="password-change">
+                                    Change password
+                                </div>
+
+                                <!-- <div class="form-group text-center mt-4" data-toggle="modal" data-target="#password-modal">
+                            <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal">Change password</button>
+                          
+                        </div> -->
+
+                                <div class="form-group text-center mt-4 modal-buttons">
+                                    <button type="button" class="btn btn-primary btn-wide m-1">Save</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="change-pass-form">
+                            <h1 class="members__title">CHANGE PASSWORD</h1>
+                            <form class="form form--lined form--inputbg modal-inner">
+                                <div class="form-group mb-2">
+                                    <label>Password</label>
+                                    <input class="form-control" type="password" placeholder="Enter your password" />
+                                </div>
+
+                                <div class="form-group mb-2">
+                                    <label>New Password</label>
+                                    <input class="form-control" type="password" placeholder="Enter new password" />
+                                </div>
+
+                                <div class="form-group mb-2">
+                                    <label>Сonfirm Password</label>
+                                    <input class="form-control" type="password" placeholder="Сonfirm new password" />
+                                </div>
+
+                                <div class="form-group text-center mt-4 modal-buttons modal-buttons--password">
+                                    <button type="button" class="btn btn-primary btn-wide m-1">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ---start password modal------ -->
+        <div class="modal fade" id="password-modal" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog--view-task">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Password</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="mikeicon-x"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------end password modal------------ -->
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/prefixfree.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>

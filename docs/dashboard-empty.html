@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>MikeApp</title>
+        <meta name="author" content="Main Street Court" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro:400,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-ui.css" />
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="site-header">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo-mikeapp-hor.svg" alt="MikeApp" />
+                    <p class="navbar-tagline">Take charge of your music career... with a little help from Mike</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="mikeicon-mobile-menu"></span>
+                </button>
+
+                <div class="navbar-mobile-actions">
+                    <div class="nav-item dropdown dropdown-other dropdown-mobile">
+                        <a class="btn btn-primary" href="#" id="newItem" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mikeicon-plus"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="newItem">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <a href="#" class="btn-closemenu" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+                        <i class="mikeicon-x"></i>
+                    </a>
+
+                    <ul class="navbar-nav navbar-nav-center mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="dashboard.html">
+                                <i class="mikeicon-home"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tasks.html">
+                                <i class="mikeicon-tasks"></i>
+                                Tasks
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="finances.html">
+                                <i class="mikeicon-finances"></i>
+                                Finances
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="goals.html">
+                                <i class="mikeicon-goals"></i>
+                                Goals
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-other">
+                            <a class="nav-link" href="#" id="menuMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mikeicon-dots-v"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="menuMore">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav navbar-nav-right">
+                        <li class="nav-item nav-item-center nav-item-action">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create New...</button>
+                                <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">Task</a>
+                                    <a class="dropdown-item" href="#">Schedule</a>
+                                    <a class="dropdown-item" href="#">Goal</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropdown-user">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="avatar">NS</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Content -->
+        <main class="content">
+            <div class="container">
+                <!-- Content Header -->
+                <div class="content-head">
+                    <h1>Rocking Band</h1>
+                    <p>Member Name</p>
+                </div>
+
+                <div class="content-body">
+                    <!-- Stats -->
+                    <div class="stats">
+                        <a href="#" class="stat stat-link">
+                            <p class="stat-val">6</p>
+                            <p class="stat-desc">
+                                Pending <br />
+                                Tasks
+                            </p>
+                        </a>
+                        <a href="#" class="stat stat-link">
+                            <p class="stat-val">2</p>
+                            <p class="stat-desc">
+                                Upcoming <br />
+                                Events
+                            </p>
+                        </a>
+                        <a href="#" class="stat stat-link">
+                            <p class="stat-val">&pound;1,350</p>
+                            <p class="stat-desc">
+                                Current <br />
+                                Balance
+                            </p>
+                        </a>
+                    </div>
+
+                    <!-- Items List: Tasks -->
+                    <div class="list">
+                        <div class="list-head">
+                            <h3 class="m-0">
+                                <i class="mikeicon-tasks"></i>
+                                Tasks
+                            </h3>
+                            <div class="list-head-actions">
+                                <a href="#" class="btn-text btn-new mr-3">
+                                    <i class="mikeicon-pluscircle"></i>
+                                    New Task
+                                </a>
+                                <p class="list-head-more mb-0">
+                                    13 more<span class="distancer-h">&middot;</span><a href="#"><span class="text">See All</span><i class="mikeicon-caret-r"></i></a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="list-body">
+                            <div class="list-row--empty">
+                                <img src="images/picto-empty.png" alt="" />
+
+                                <div class="list-row--empty__text">
+                                    You don't have any scheduled tasks
+                                </div>
+                                <a href="#" class="list-row--empty__button">Create task <span>+</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Items List: Schedule -->
+                    <div class="list">
+                        <div class="list-head">
+                            <h3 class="m-0">
+                                <i class="mikeicon-schedule"></i>
+                                Schedule
+                            </h3>
+                            <div class="list-head-actions">
+                                <a href="#" class="btn-text btn-new mr-3">
+                                    <i class="mikeicon-pluscircle"></i>
+                                    New Event
+                                </a>
+                                <p class="list-head-more mb-0">
+                                    13 more<span class="distancer-h">&middot;</span><a href="#"><span class="text">See All</span><i class="mikeicon-caret-r"></i></a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="list-body">
+                            <div class="list-row--empty">
+                                <img src="images/picto-empty.png" alt="" />
+
+                                <div class="list-row--empty__text">
+                                    You don't have any scheduled events
+                                </div>
+                                <a href="#" class="list-row--empty__button">Create event <span>+</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Items List: Goals -->
+                    <div class="list">
+                        <div class="list-head">
+                            <h3 class="m-0">
+                                <i class="mikeicon-goals"></i>
+                                Goals
+                            </h3>
+                            <div class="list-head-actions">
+                                <a href="#" class="btn-text btn-new mr-3">
+                                    <i class="mikeicon-pluscircle"></i>
+                                    New Goal
+                                </a>
+                                <p class="list-head-more mb-0">
+                                    13 more<span class="distancer-h">&middot;</span><a href="#"><span class="text">See All</span><i class="mikeicon-caret-r"></i></a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="list-body">
+                            <div class="list-row--empty">
+                                <img src="images/picto-empty.png" alt="" />
+
+                                <div class="list-row--empty__text">
+                                    No goals set yet
+                                </div>
+                                <a href="#" class="list-row--empty__button">ADD Goal<span>+</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <p class="m-0 text-muted">&copy; 2020 MikeApp</p>
+            </div>
+        </footer>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/prefixfree.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>

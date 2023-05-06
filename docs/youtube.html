@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>MikeApp</title>
+        <meta name="author" content="Main Street Court" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro:400,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-ui.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <head>
+            <script src="https://js.stripe.com/v3/"></script>
+            <link rel="stylesheet" href="StripeElements.css" />
+        </head>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="site-header">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo-mikeapp-hor.svg" alt="MikeApp" />
+                    <p class="navbar-tagline">Take charge of your music career... with a little help from Mike</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="mikeicon-mobile-menu"></span>
+                </button>
+
+                <div class="navbar-mobile-actions">
+                    <div class="nav-item dropdown dropdown-other dropdown-mobile">
+                        <a class="btn btn-primary" href="#" id="newItem" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mikeicon-plus"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="newItem">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <a href="#" class="btn-closemenu" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+                        <i class="mikeicon-x"></i>
+                    </a>
+
+                    <ul class="navbar-nav navbar-nav-center mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">
+                                <i class="mikeicon-home"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tasks.html">
+                                <i class="mikeicon-tasks"></i>
+                                Tasks
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html">
+                                <i class="mikeicon-tasks"></i>
+                                Schedule
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="finances.html">
+                                <i class="mikeicon-finances"></i>
+                                Finances
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="goals.html">
+                                <i class="mikeicon-goals"></i>
+                                Goals
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="social.html">
+                              <svg height="512pt" viewBox="-21 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m453.332031 85.332031c0 38.292969-31.039062 69.335938-69.332031 69.335938s-69.332031-31.042969-69.332031-69.335938c0-38.289062 31.039062-69.332031 69.332031-69.332031s69.332031 31.042969 69.332031 69.332031zm0 0"/><path d="m384 170.667969c-47.0625 0-85.332031-38.273438-85.332031-85.335938 0-47.058593 38.269531-85.332031 85.332031-85.332031s85.332031 38.273438 85.332031 85.332031c0 47.0625-38.269531 85.335938-85.332031 85.335938zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.332031 0 29.398438 23.914062 53.335938 53.332031 53.335938s53.332031-23.9375 53.332031-53.335938c0-29.394531-23.914062-53.332031-53.332031-53.332031zm0 0"/><path d="m453.332031 426.667969c0 38.289062-31.039062 69.332031-69.332031 69.332031s-69.332031-31.042969-69.332031-69.332031c0-38.292969 31.039062-69.335938 69.332031-69.335938s69.332031 31.042969 69.332031 69.335938zm0 0"/><path d="m384 512c-47.0625 0-85.332031-38.273438-85.332031-85.332031 0-47.0625 38.269531-85.335938 85.332031-85.335938s85.332031 38.273438 85.332031 85.335938c0 47.058593-38.269531 85.332031-85.332031 85.332031zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.335938 0 29.394531 23.914062 53.332031 53.332031 53.332031s53.332031-23.9375 53.332031-53.332031c0-29.398438-23.914062-53.335938-53.332031-53.335938zm0 0"/><path d="m154.667969 256c0 38.292969-31.042969 69.332031-69.335938 69.332031-38.289062 0-69.332031-31.039062-69.332031-69.332031s31.042969-69.332031 69.332031-69.332031c38.292969 0 69.335938 31.039062 69.335938 69.332031zm0 0"/><path d="m85.332031 341.332031c-47.058593 0-85.332031-38.269531-85.332031-85.332031s38.273438-85.332031 85.332031-85.332031c47.0625 0 85.335938 38.269531 85.335938 85.332031s-38.273438 85.332031-85.335938 85.332031zm0-138.664062c-29.417969 0-53.332031 23.933593-53.332031 53.332031s23.914062 53.332031 53.332031 53.332031c29.421875 0 53.335938-23.933593 53.335938-53.332031s-23.914063-53.332031-53.335938-53.332031zm0 0"/><path d="m135.703125 245.761719c-7.425781 0-14.636719-3.863281-18.5625-10.773438-5.824219-10.21875-2.238281-23.253906 7.980469-29.101562l197.949218-112.851563c10.21875-5.867187 23.253907-2.28125 29.101563 7.976563 5.824219 10.21875 2.238281 23.253906-7.980469 29.101562l-197.953125 112.851563c-3.328125 1.898437-6.953125 2.796875-10.535156 2.796875zm0 0"/><path d="m333.632812 421.761719c-3.585937 0-7.210937-.898438-10.539062-2.796875l-197.953125-112.851563c-10.21875-5.824219-13.800781-18.859375-7.976563-29.101562 5.800782-10.238281 18.855469-13.84375 29.097657-7.976563l197.953125 112.851563c10.21875 5.824219 13.800781 18.859375 7.976562 29.101562-3.945312 6.910157-11.15625 10.773438-18.558594 10.773438zm0 0"/></svg>
+                                Social
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-other">
+                            <a class="nav-link" href="#" id="menuMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mikeicon-dots-v"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="menuMore">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav navbar-nav-right">
+                        <li class="nav-item nav-item-center nav-item-action">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create New...</button>
+                                <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">Task</a>
+                                    <a class="dropdown-item" href="#">Schedule</a>
+                                    <a class="dropdown-item" href="#">Goal</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropdown-user">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="avatar">NS</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <a class="dropdown-item" href="#">Account settings</a>
+                                <a class="dropdown-item" href="#">User settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Content -->
+        <main class="content">
+            <div class="container">
+                <!-- Content Header -->  <a href="" class="social-back-button btn btn-outline">
+        <?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+<g>
+    <g>
+        <path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12
+            C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084
+            c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864
+            l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/>
+    </g>
+</g>
+
+</svg>
+    Back 
+    </a>
+                <div class="content-head content-head--social">
+                    <h1>YouTube</h1>
+                    
+                </div>
+  
+                <div class="social-page__header">
+           <div class="statistics-select-wrapper">
+   <span>Show charts for the last</span>
+    <div class="statistics-select">
+                    <select class="form-control select" name="" id="">
+                                            <option value="" disabled selected>last 7 days</option>
+                                            <option value="">last 30 days</option>
+                                            <option value="">last 90 days</option>
+                                            <option value="">last years</option>
+                                           
+                                        </select>  
+                </div>
+</div>                   
+<div class="social-header-right-wrapper">          
+                   <a href="" class="button btn btn-primary">
+                    Visit Facebook page
+                </a>
+                    </div>
+              
+                </div>
+
+                <div class="content-body">
+                    <!-- Stats -->
+
+                    <div class="social-page__items">
+                        
+                        <div class="social-page__item">
+                            <div class="social-page__item-content">
+                                <div class="social-page__item-header">
+                                    Total likes
+                                </div>
+
+                                <div class="social-page__item-value-wrapper">
+                                    <div class="social-page__item-value">
+                                        5,325
+
+                                        <div class="social-page__item-changes">
+                                      <img src="images/triangle.svg" alt="" class="top-green-arrow"> 30 new likes
+
+                                       <div class="post-stat-tooltipe">
+                                          5% increase during this period
+                                      </div>
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="social-page__item-legend">
+                                    <div class="legend-icon legend-icon--pink">
+                                        
+                                    </div>
+                                    <div class="legend-title">
+                                        Total likes
+                                    </div>
+                                </div>
+                                <canvas id="likesChart"></canvas>
+                           
+                            </div>
+                        </div>
+                        <div class="social-page__item">
+                           <div class="social-page__item-content">
+                                <div class="social-page__item-header">
+                                    5 most popular posts <span>since <span>
+                                        1st November 2020
+                                    </span></span>
+                                </div>
+
+                                <div class="popular-post__row popular-post__row--header">
+                                    <div class="post-name">
+                                        POST NAME
+                                    </div>
+<div class="post-stat">
+    <div class="post-stat-item post-stat-item--date">
+    Date</div>
+   <div class="post-stat-item">
+                                      <img src="images/play.svg" alt="" class="eye">Plays 
+
+                                       <div class="post-stat-tooltipe">
+                                          The number of people who had your post enter their screen
+                                      </div> 
+                                    </div>
+                                   
+                                    <div class="post-stat-item">
+                                        <img src="images/pointer2.svg" alt=""> 
+                                       <span> Engagemen</span>
+                                         <div class="post-stat-tooltipe">
+                                          The number of times people have engaged with your post e.g. commented, liked, shared, or clicked on particular elements of the post.
+                                      </div> 
+                                    </div> 
+</div>
+                                    
+                                </div>
+
+<div class="popular-post__row">
+                                    <a href="" class="post-name">
+                                       1. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi ipsum iure facilis quasi, consequuntur eaque odit voluptate ut delectus maxime, sapiente, tempora non adipisci amet excepturi, facere labore! Nesciunt, expedita                                    </a>
+<div class="post-stat">
+    <div class="post-date">
+                                        01 Aug 2020
+                                    </div>
+   <div class="post-stat-item post-stat-item--share">
+                                        1253
+                                    </div>
+                                   
+                                    <div class="post-stat-item post-stat-item--like">
+                                        11351
+                                    </div> 
+</div>                                    
+                                </div>
+
+<div class="popular-post__row">
+                                    <a href="" class="post-name">
+                                       2. Lorem ipsum dolor sit amet consectetur adipisicing, elit...
+                                    </a>
+<div class="post-stat">
+     <div class="post-date">
+                                        01 Aug 2020
+                                    </div>
+   <div class="post-stat-item post-stat-item--share">
+                                        1050
+                                    </div>
+                                   
+                                    <div class="post-stat-item post-stat-item--like">
+                                        10023
+                                    </div> 
+</div>                                   
+                                </div>
+
+<div class="popular-post__row">
+                                    <a href="" class="post-name">
+                                       3. Lorem ipsum dolor sit amet consectetur adipisicing, elit...
+                                    </a>
+<div class="post-stat">
+     <div class="post-date">
+                                       01 Aug 2020
+                                    </div>
+   <div class="post-stat-item post-stat-item--share">
+                                        963
+                                    </div>
+                                   
+                                    <div class="post-stat-item post-stat-item--like">
+                                        8431
+                                    </div> 
+</div>
+                                    
+                                </div>
+
+<div class="popular-post__row">
+                                    <a href="" class="post-name">
+                                       4. Lorem ipsum dolor sit amet consectetur adipisicing, elit...
+                                    </a>
+<div class="post-stat">
+     <div class="post-date">
+                                        01 Aug 2020
+                                    </div>
+   <div class="post-stat-item post-stat-item--share">
+                                        721
+                                    </div>
+                                   
+                                    <div class="post-stat-item post-stat-item--like">
+                                        381
+                                    </div> 
+</div>
+                                    
+                                </div>
+
+<div class="popular-post__row">
+                                    <a href="" class="post-name">
+                                       5. Lorem ipsum dolor sit amet consectetur adipisicing, elit...
+                                    </a>
+<div class="post-stat">
+     <div class="post-date">
+                                        01 Aug 2020
+                                    </div>
+   <div class="post-stat-item post-stat-item--share">
+                                        79
+                                    </div>
+                                   
+                                    <div class="post-stat-item post-stat-item--like">
+                                        93
+                                    </div> 
+</div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                         <div class="social-page__item">
+                            <div class="social-page__item-content">
+                                <div class="social-page__item-header">
+                                  Total Plays
+                                </div>
+
+                                <div class="social-page__item-value-wrapper">
+                                    <div class="social-page__item-value">
+                                        249
+                                        <div class="social-page__item-changes social-page__item-changes--red">
+                                       <img src="images/triangle-red.svg" alt="" class="top-green-arrow top-red-arrow">98%
+
+                                       <div class="post-stat-tooltipe">
+                                          Down 98% compared to previus 7 days
+                                      </div>
+                                    </div>
+                                    </div>                                    
+                                </div>
+                                <div class="social-page__item-legend">
+                                    <div class="legend-icon legend-icon--blue">
+                                        
+                                    </div>
+                                    <div class="legend-title">
+                                        Reach
+                                    </div>
+                                </div>
+                                <canvas id="impressionsChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="social-page__item">
+                           <div class="social-page__item-content">
+                                <div class="social-page__item-header">
+                                    5 last posts <span>since <span>
+                                        1st November 2020
+                                    </span></span>
+                                </div>
+                                <div class="popular-post__row popular-post__row--header">
+                                    <div class="post-name">
+                                        POST NAME
+                                    </div>
+<div class="post-stat">
+<div class="post-stat-item post-stat-item--date">
+    Date</div>
+   <div class="post-stat-item">
+                                      <img src="images/play.svg" alt="" class="eye"> Plays
+                                       <div class="post-stat-tooltipe">
+                                          The number of people who had your post enter their screen
+                                      </div> 
+                                     
+                                    </div>
+                                   
+                                    <div class="post-stat-item">
+                                        <img src="images/pointer2.svg" alt=""> 
+                                        Engagemen
+                                          <div class="post-stat-tooltipe">
+                                          The number of times people have engaged with your post e.g. commented, liked, shared, or clicked on particular elements of the post.
+                                      </div>
+                                    </div> 
+</div>                                    
+                                </div>
+<div class="popular-post__row">
+                                    <a href="" class="post-name">
+                                       1. Lorem ipsum dolor sit amet consectetur adipisicing, elit...
+                                    </a>
+<div class="post-stat">
+    <div class="post-date">
+                                        01 Aug 2020
+                                    </div>
+   <div class="post-stat-item post-stat-item--share">
+                                        1253
+                                    </div>
+                                   
+                                    <div class="post-stat-item post-stat-item--like">
+                                        11351
+                                    </div> 
+</div>                                   
+                                </div>
+
+<div class="popular-post__row">
+                                    <a href="" class="post-name">
+                                       2. Lorem ipsum dolor sit amet consectetur adipisicing, elit...
+                                    </a>
+<div class="post-stat">
+    <div class="post-date">
+                                       01 Aug 2020
+                                    </div>
+   <div class="post-stat-item post-stat-item--share">
+                                        1050
+                                    </div>
+                                   
+                                    <div class="post-stat-item post-stat-item--like">
+                                        10023
+                                    </div> 
+</div>                                   
+                                </div>
+<div class="popular-post__row">
+                                    <a href="" class="post-name">
+                                       3. Lorem ipsum dolor sit amet consectetur adipisicing, elit...
+                                    </a>
+<div class="post-stat">
+    <div class="post-date">
+                                        01 Aug 2020
+                                    </div>
+   <div class="post-stat-item post-stat-item--share">
+                                        963
+                                    </div>
+                                   
+                                    <div class="post-stat-item post-stat-item--like">
+                                        8431
+                                    </div> 
+</div>                                  
+                                </div>
+
+<div class="popular-post__row">
+                                    <a href="" class="post-name">
+                                       4. Lorem ipsum dolor sit amet consectetur adipisicing, elit...
+                                    </a>
+<div class="post-stat">
+    <div class="post-date">
+                                       01 Aug 2020
+                                    </div>
+   <div class="post-stat-item post-stat-item--share">
+                                        721
+                                    </div>
+                                   
+                                    <div class="post-stat-item post-stat-item--like">
+                                        381
+                                    </div> 
+</div>                                   
+                                </div>
+
+<div class="popular-post__row">
+                                    <a href="" class="post-name">
+                                       5. Lorem ipsum dolor sit amet consectetur adipisicing, elit...
+                                    </a>
+<div class="post-stat">
+    <div class="post-date">
+                                        01 Aug 2020
+                                    </div>
+   <div class="post-stat-item post-stat-item--share">
+                                        79
+                                    </div>
+                                   
+                                    <div class="post-stat-item post-stat-item--like">
+                                        93
+                                    </div> 
+</div>                                   
+                                </div>
+                            </div>
+                        </div>
+                       <div class="social-page__item">
+                            <div class="social-page__item-content">
+                                <div class="social-page__item-header">
+                                     Profile Views
+                                </div>
+
+                                <div class="social-page__item-value-wrapper">
+                                    <div class="social-page__item-value">
+                                        10,673
+                                        <div class="social-page__item-changes">
+                                       <img src="images/triangle.svg" alt="" class="top-green-arrow">   60%
+
+                                         <div class="post-stat-tooltipe">
+                                          Up 60% compared to previus 7 days
+                                      </div>
+                                    </div>
+                                    </div>                                    
+                                </div>
+                                <div class="social-page__item-legend">
+                                    <div class="legend-icon legend-icon--yellow">
+                                        
+                                    </div>
+                                    <div class="legend-title">
+                                         PROFILE VIEWS
+                                    </div>
+                                </div>
+                                <canvas id="profileViewsChart"></canvas>                           
+                            </div>
+                        </div>
+                         <div class="social-page__item">
+                            <div class="social-page__item-content">
+                                <div class="social-page__item-header">
+                                     Engagement
+                                </div>
+
+                                <div class="social-page__item-value-wrapper">
+                                    <div class="social-page__item-value">
+                                        0
+                                       
+                                   
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="social-page__item-legend">
+                                    <div class="legend-icon legend-icon--purple">
+                                        
+                                    </div>
+                                    <div class="legend-title">
+                                         
+                                         ENGAGEMENT
+                                    </div>
+                                </div>
+
+
+                                <canvas id="engagementChart"></canvas>
+                           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+
+        <!-- start connect Modal -->
+        <div class="modal fade modal--connection" id="modal-connect" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog--goal">
+                <div class="modal-content">
+                    <div class="modal-header modal-header--goals">
+                        <h5 class="modal-title" id="staticBackdropLabel">Enter your username for connection</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="mikeicon-x"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <form class="form form--lined form--inputbg modal-inner">
+                            <div class="form-group mb-2">
+                                <label>Username</label>
+                                <input class="form-control" type="text" placeholder="Enter your username" />
+                            </div>
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1"><a class="connect-button" href="facebook.html">Connect</a></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+ <!-- end connect Modal -->
+
+<!-- start connect youtube Modal -->
+        <div class="modal fade modal--connection" id="modal-connect-youtube" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog--goal">
+                <div class="modal-content">
+                    <div class="modal-header modal-header--goals">
+                        <h5 class="modal-title" id="staticBackdropLabel">Enter your Channel ID for connection</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="mikeicon-x"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <form class="form form--lined form--inputbg modal-inner">
+                            <div class="form-group mb-2">
+                                <label>Channel ID</label>
+                                <input class="form-control" type="text" placeholder="Enter your Channel ID" />
+                            </div>
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1"><a class="connect-button" href="facebook.html">Connect</a></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+ <!-- end connect youtybe Modal -->
+        <footer class="site-footer">
+            <div class="container">
+                <p class="m-0 text-muted">&copy; 2020 MikeApp</p>
+                <div class="footer__links-to-app">
+                    <a href=""><img src="images/appstore.png" alt="" /></a>
+                    <a href=""><img src="images/googleplay.png" alt="" /></a>
+                </div>
+            </div>
+        </footer>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/prefixfree.min.js"></script>
+        <script src="js/custom.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+          <script>
+            var ctx = document.getElementById('likesChart').getContext('2d');
+            
+var chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['19 Jan', ' 19 Feb', '19 Mar', '19 Apr', '19 May', '19 Jun', '19 Jul'],
+        datasets: [{
+            backgroundColor: false,
+            label: "Likes",
+            lineTension: 0,
+            borderColor: '#c64897',
+            data: [30, 20, 30, 20, 28, 14, 35],
+            pointRadius: 0,
+            pointStyle: 'circle',
+        }]
+    },
+    options: {
+        legend: {
+    display: false,
+    labels: {
+            usePointStyle: true
+         }
+},
+    }
+
+});
+
+        </script>
+
+ <script>
+var ctx = document.getElementById('impressionsChart').getContext('2d');
+            
+var chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['19 Jan', ' 19 Feb', '19 Mar', '19 Apr', '19 May', '19 Jun', '19 Jul'],
+        datasets: [{
+            backgroundColor: false,
+            label: "Likes",
+            lineTension: 0,
+            borderColor: '#2e7692',
+            data: [30, 20, 30, 23, 26, 18, 19],
+            pointRadius: 0,
+            pointStyle: 'circle',
+        }]
+    },
+    options: {
+        legend: {
+    display: false,
+    labels: {
+            usePointStyle: true
+         }
+},
+    }
+
+});
+        </script>
+
+  <script>
+
+var ctx = document.getElementById('profileViewsChart').getContext('2d');
+            
+var chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['19 Jan', ' 19 Feb', '19 Mar', '19 Apr', '19 May', '19 Jun', '19 Jul'],
+        datasets: [{
+            backgroundColor: false,
+            label: "Likes",
+            lineTension: 0,
+            borderColor: '#e0ce67',
+            data: [30, 20, 30, 23, 16, 18, 30],
+            pointRadius: 0,
+            pointStyle: 'circle',
+        }]
+    },
+    options: {
+        legend: {
+    display: false,
+    labels: {
+            usePointStyle: true
+         }
+},
+    }
+
+});
+        </script> 
+
+<script>
+var ctx = document.getElementById('engagementChart').getContext('2d');
+            
+var chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['19 Jan', ' 19 Feb', '19 Mar', '19 Apr', '19 May', '19 Jun', '19 Jul'],
+        datasets: [{
+            backgroundColor: false,
+            label: "Likes",
+            lineTension: 0,
+            borderColor: '#7646aa',
+            data: [1, 0, 0, 0, 0, 0, 0],
+            pointRadius: 0,
+            pointStyle: 'circle',
+        }]
+    },
+    options: {
+        legend: {
+    display: false,
+    labels: {
+            usePointStyle: true
+         }
+},
+    }
+
+});         
+        </script>
+    </body>
+</html>

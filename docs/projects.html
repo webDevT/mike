@@ -1,0 +1,984 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>MikeApp</title>
+    <meta name="author" content="Main Street Court">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<!-- ---------start prompt-------------- -->
+<!-- <div class="prompt">
+    
+    <div class="prompt__text">
+       Please, select a task to add a note to it
+    </div>
+    <div class="prompt__close">+</div>
+</div> -->
+<!-- ---------end prompt--------------- -->
+
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo-mikeapp-hor.svg" alt="MikeApp">
+                <p class="navbar-tagline">Take charge of your music career... with a little help from Mike</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mikeicon-mobile-menu"></span>
+            </button>
+
+            <div class="navbar-mobile-actions">
+                <div class="nav-item dropdown dropdown-other dropdown-mobile">
+                    <a class="btn btn-primary" href="#" id="newItem" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mikeicon-plus"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="newItem">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <a href="#" class="btn-closemenu" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+                    <i class="mikeicon-x"></i>
+                </a>
+
+                <ul class="navbar-nav navbar-nav-center mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="dashboard.html">
+                            <i class="mikeicon-home"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="projects.html">
+                            <i class="mikeicon-tasks"></i>
+                            Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="goals.html">
+                            <i class="mikeicon-goals"></i>
+                            Goals
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">
+                            <i class="mikeicon-tasks"></i>
+                            Schedule
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vault.html">
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+                            <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 90 90" style="enable-background:new 0 0 90 90; width:12px;" xml:space="preserve">
+                            <g>
+                                <path d="M87,5H3C1.343,5,0,6.343,0,8v12h90V8C90,6.343,88.657,5,87,5z M5,78c0,3.851,3.15,7,7,7h66
+                                    c3.851,0,7-3.149,7-7V25H5V78z M30,35h30v10H30V35z"/>
+                            </g>
+                            
+                            </svg>
+                            
+                            The Vault
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="social.html">
+                          <svg height="512pt" viewBox="-21 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m453.332031 85.332031c0 38.292969-31.039062 69.335938-69.332031 69.335938s-69.332031-31.042969-69.332031-69.335938c0-38.289062 31.039062-69.332031 69.332031-69.332031s69.332031 31.042969 69.332031 69.332031zm0 0"/><path d="m384 170.667969c-47.0625 0-85.332031-38.273438-85.332031-85.335938 0-47.058593 38.269531-85.332031 85.332031-85.332031s85.332031 38.273438 85.332031 85.332031c0 47.0625-38.269531 85.335938-85.332031 85.335938zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.332031 0 29.398438 23.914062 53.335938 53.332031 53.335938s53.332031-23.9375 53.332031-53.335938c0-29.394531-23.914062-53.332031-53.332031-53.332031zm0 0"/><path d="m453.332031 426.667969c0 38.289062-31.039062 69.332031-69.332031 69.332031s-69.332031-31.042969-69.332031-69.332031c0-38.292969 31.039062-69.335938 69.332031-69.335938s69.332031 31.042969 69.332031 69.335938zm0 0"/><path d="m384 512c-47.0625 0-85.332031-38.273438-85.332031-85.332031 0-47.0625 38.269531-85.335938 85.332031-85.335938s85.332031 38.273438 85.332031 85.335938c0 47.058593-38.269531 85.332031-85.332031 85.332031zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.335938 0 29.394531 23.914062 53.332031 53.332031 53.332031s53.332031-23.9375 53.332031-53.332031c0-29.398438-23.914062-53.335938-53.332031-53.335938zm0 0"/><path d="m154.667969 256c0 38.292969-31.042969 69.332031-69.335938 69.332031-38.289062 0-69.332031-31.039062-69.332031-69.332031s31.042969-69.332031 69.332031-69.332031c38.292969 0 69.335938 31.039062 69.335938 69.332031zm0 0"/><path d="m85.332031 341.332031c-47.058593 0-85.332031-38.269531-85.332031-85.332031s38.273438-85.332031 85.332031-85.332031c47.0625 0 85.335938 38.269531 85.335938 85.332031s-38.273438 85.332031-85.335938 85.332031zm0-138.664062c-29.417969 0-53.332031 23.933593-53.332031 53.332031s23.914062 53.332031 53.332031 53.332031c29.421875 0 53.335938-23.933593 53.335938-53.332031s-23.914063-53.332031-53.335938-53.332031zm0 0"/><path d="m135.703125 245.761719c-7.425781 0-14.636719-3.863281-18.5625-10.773438-5.824219-10.21875-2.238281-23.253906 7.980469-29.101562l197.949218-112.851563c10.21875-5.867187 23.253907-2.28125 29.101563 7.976563 5.824219 10.21875 2.238281 23.253906-7.980469 29.101562l-197.953125 112.851563c-3.328125 1.898437-6.953125 2.796875-10.535156 2.796875zm0 0"/><path d="m333.632812 421.761719c-3.585937 0-7.210937-.898438-10.539062-2.796875l-197.953125-112.851563c-10.21875-5.824219-13.800781-18.859375-7.976563-29.101562 5.800782-10.238281 18.855469-13.84375 29.097657-7.976563l197.953125 112.851563c10.21875 5.824219 13.800781 18.859375 7.976562 29.101562-3.945312 6.910157-11.15625 10.773438-18.558594 10.773438zm0 0"/></svg>
+                            Social
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="finances.html">
+                            <i class="mikeicon-finances"></i>
+                            Finances
+                        </a>
+                    </li>
+                   
+                   
+                    <li class="nav-item dropdown dropdown-other">
+                        <a class="nav-link" href="#" id="menuMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mikeicon-dots-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="menuMore">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item nav-item-center nav-item-action">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create New...</button>
+                            <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right">
+                                <a class="dropdown-item" href="#">Task</a>
+                                <a class="dropdown-item" href="#">Schedule</a>
+                                <a class="dropdown-item" href="#">Goal</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown dropdown-user">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="avatar">NS</span>
+                        </a>
+                          <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Account settings</a>
+                         <a class="dropdown-item" href="#">Add Profile</a>
+                        <a class="dropdown-item" href="#">Inspiration</a>
+
+                         <a class="dropdown-item" href="partners.html">Our Partners</a>
+
+                       
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item">Switch Active Profile</div>
+                        <a class="dropdown-item text-muted ml-2" href="#">Testing Slack</a>
+                        <a class="dropdown-item text-muted ml-2" href="#">Test Payments 5</a>
+                        <a class="dropdown-item" href="#">User settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Content -->
+    <main class="content">
+
+        <div class="container">
+
+            <!-- Content Header -->
+            <div class="content-head ">
+                <h1 class="page-title">Hey <span>Anne</span>, here are the projects you're working on.</h1>
+               
+            </div>
+
+            <div class="content-body">
+
+
+              
+                
+                <!-- Tab panes -->
+                <div class="tab-content">
+                   <!--  <div class="projects__header">
+                        <h3 class="projects-title">
+                                    TASKS DUE TODAY
+                                </h3>
+
+                        <a href="tasks.html" class="all-tasks-link btn-text btn-new">
+                          
+                            All tasks
+                        </a>
+                    </div> -->
+
+                    <!-- Pending Tasks -->
+                    <div class="tab-pane fade show active" id="pending" role="tabpanel" aria-labelledby="pending-tab">
+
+                        <!-- Items List: Up Next -->
+                        <div class="list">
+<div class="list-head">
+                                <h3 class="m-0">
+                                    TASKS DUE TODAY
+                                </h3>
+                                <a href="tasks.html" class="all-tasks-link btn-text btn-new">
+                          
+                            All tasks
+                        </a>
+                            </div>
+                 
+
+                            <div class="list-body list-body--projects">
+                                <a href="#" class="list-row list-row-link list-row-due-today">
+                                    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-newtask--edit">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </span>  
+                                         <span class="list-row__menu-dropdown-item list-row__menu--clone">
+                                            <img src="images/sheet.svg" alt="" class="">
+                                            <span>
+                                            Copy</span>
+                                         </span>
+                                         <span class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-task--view">
+
+
+                                         
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        
+                                        </span> 
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+                                        
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+                                    <div class="list-col list-col-200">
+                                        <p class="due">Due <span class="text-due-today">Today</span></p>
+                                    </div>
+                                    <div class="list-col">
+                                        <p>Set up Facebook profile and post images</p>
+                                    </div>
+                                    <div class="list-col list-col-200">
+
+                                    </div>
+                                    <div class="list-col list-col-100 text-center list-col-status">
+                                        <span class="list-check">
+                                            <i class="mikeicon-checkmark"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="list-row list-row-link list-row-due-today">
+                                    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-newtask--edit">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </span>  
+                                         <span class="list-row__menu-dropdown-item list-row__menu--clone">
+                                            <img src="images/sheet.svg" alt="" class="">
+                                            <span>
+                                            Copy</span>
+                                         </span>
+                                         <span class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-task--view">
+
+
+                                         
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        
+                                        </span> 
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+                                        
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+                                    <div class="list-col list-col-200">
+                                        <p class="due">Due <span class="text-due-today">Today</span></p>
+                                    </div>
+                                    <div class="list-col">
+                                        <p>Set up Facebook profile and post images</p>
+                                    </div>
+                                    <div class="list-col list-col-200">
+
+                                    </div>
+                                    <div class="list-col list-col-100 text-center list-col-status">
+                                        <span class="list-check">
+                                            <i class="mikeicon-checkmark"></i>
+                                        </span>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="list-row list-row-link list-row-due-today">
+                                    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-newtask--edit">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Edit</span>
+                                          </span>  
+                                         <span class="list-row__menu-dropdown-item list-row__menu--clone">
+                                            <img src="images/sheet.svg" alt="" class="">
+                                            <span>
+                                            Copy</span>
+                                         </span>
+                                         <span class="list-row__menu-dropdown-item list-row__menu--view" data-toggle="modal" data-target="#modal-task--view">
+
+
+                                         
+                                        <img src="images/eye.svg" alt="" class=""> 
+                                        <span>View</span>
+                                        
+                                        </span> 
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+                                        
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+                                    <div class="list-col list-col-200">
+                                        <p class="due">Due <span class="text-due-today">Today</span></p>
+                                    </div>
+                                    <div class="list-col">
+                                        <p>Set up Facebook profile and post images</p>
+                                    </div>
+                                    <div class="list-col list-col-200">
+
+                                    </div>
+                                    <div class="list-col list-col-100 text-center list-col-status">
+                                        <span class="list-check">
+                                            <i class="mikeicon-checkmark"></i>
+                                        </span>
+                                    </div>
+                                </a>
+
+
+
+                               
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+<!-- <div class="projects__header">
+    <h3 class="projects-title">PROJECTS</h3>
+
+     <a href="#" class="btn-text btn-new" data-toggle="modal" data-target="#modal-newtask">
+                            <i class="mikeicon-pluscircle"></i>
+                            New project
+                        </a>
+</div> -->
+     <div class="list-head list-head--projects">
+                                <h3 class="projects-title">PROJECTS</h3>
+
+
+<div class="projects-header__right">
+      <div class="include-completed__wrapper">
+  <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="check-includecompleted" readonly>
+                            <label class="custom-control-label" for="check-includecompleted">Include completed</label>
+                        </div>  
+</div>
+
+                                <a href="#" class="btn-text btn-new" data-toggle="modal" data-target="#modal-newtask">
+                            <i class="mikeicon-pluscircle"></i>
+                            New project
+                        </a>
+
+</div>
+                              
+                            </div>            
+
+<div class="projects__wrapper">
+    
+                <div class="content-body">
+                    <!-- Stats -->
+                    <div class="stats stats--social stats--projects">
+<span class="stat stat-link stat-link--social project-item">
+
+    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-rename">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Rename</span>
+                                          </span>  
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="">
+                                               <img src="images/check-box.svg" >
+                                               <span>Mark all tasks completed</span>
+                                          </span> 
+                                         
+                            
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+                                        
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                            <span class="social__item">
+                               
+                               <span class="social-network">
+                                
+                               
+                                  
+                                   <span class="social-item__name">
+                                    <h3>
+                              Make & catalogue up to 100 beats ready for any projects
+                            </h3>
+                                </span> 
+                                </span> 
+                                
+                                <span class="social__item-icons-wrapper">
+                            2/10 tasks completed   
+                            
+                                </span>
+                                <span class="social__item-footer social__item-footer-active">
+                                  
+                         <a href="project-page.html" class="connect btn view-social">View project</a>
+                              
+
+                                </span>                              
+                            
+                            </span>
+
+
+                            
+                        </span>
+
+
+<span class="stat stat-link stat-link--social project-item project-item--completed">
+
+    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-rename">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Rename</span>
+                                          </span>  
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="">
+                                               <img src="images/check-box.svg" >
+                                               <span>Mark all tasks completed</span>
+                                          </span> 
+                                         
+                            
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+                                        
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                            <span class="social__item">
+                               
+                               <span class="social-network">
+                                
+                               
+                                  
+                                   <span class="social-item__name">
+                                    <h3>
+                              Release new album
+                            </h3>
+                                </span> 
+                                </span> 
+                                
+                                <span class="social__item-icons-wrapper">
+                            3/3 tasks completed   <img src="images/tick-green.svg" alt="">
+                            
+                                </span>
+                                <span class="social__item-footer social__item-footer-active">
+                                  
+                         <a href="project-page.html" class="connect btn view-social">View project</a>
+                              
+
+                                </span>                              
+                            
+                            </span>
+
+
+                            
+                        </span>
+
+ <span class="stat stat-link stat-link--social project-item">
+
+    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-rename">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Rename</span>
+                                          </span>  
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="">
+                                               <img src="images/check-box.svg" >
+                                               <span>Mark all tasks completed</span>
+                                          </span> 
+                                         
+                            
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+                                        
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                            <span class="social__item">
+                               
+                               <span class="social-network">
+                                
+                               
+                                  
+                                   <span class="social-item__name">
+                                    <h3>
+                              Project 3
+                            </h3>
+                                </span> 
+                                </span> 
+                                
+                                <span class="social__item-icons-wrapper">
+                            6/8 tasks completed   
+                            
+                                </span>
+                                <span class="social__item-footer social__item-footer-active">
+                                  
+                         <a href="project-page.html" class="connect btn view-social">View project</a>
+                              
+
+                                </span>                              
+                            
+                            </span>
+
+
+                            
+                        </span>
+    
+
+ <span class="stat stat-link stat-link--social project-item">
+
+    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-rename">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Rename</span>
+                                          </span>  
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="">
+                                               <img src="images/check-box.svg" >
+                                               <span>Mark all tasks completed</span>
+                                          </span> 
+                                         
+                            
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+                                        
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                            <span class="social__item">
+                               
+                               <span class="social-network">
+                                
+                               
+                                  
+                                   <span class="social-item__name">
+                                    <h3>
+                              Project 3
+                            </h3>
+                                </span> 
+                                </span> 
+                                
+                                <span class="social__item-icons-wrapper">
+                            6/8 tasks completed   
+                            
+                                </span>
+                                <span class="social__item-footer social__item-footer-active">
+                                  
+                         <a href="project-page.html" class="connect btn view-social">View project</a>
+                              
+
+                                </span>                              
+                            
+                            </span>
+
+
+                            
+                        </span>
+
+                         <span class="stat stat-link stat-link--social project-item">
+
+    <span class="list-row__menu">
+                                        <span class="list-row__menu-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                        <span class="list-row__menu-dropdown">
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="" data-toggle="modal" data-target="#modal-rename">
+                                               <img src="images/icon-goals-edit.png" >
+                                               <span>Rename</span>
+                                          </span>  
+
+                                          <span class="list-row__menu-dropdown-item list-row__menu--edit" alt="">
+                                               <img src="images/check-box.svg" >
+                                               <span>Mark all tasks completed</span>
+                                          </span> 
+                                         
+                            
+                                          <span class="list-row__menu-dropdown-item list-row__menu--delete">
+                                        <img src="images/icon-goals-delete.png" alt="" class=""> 
+                                        <span>Delete </span>
+                                        
+                                        </span>
+                                        
+                                          
+                                        </span>
+                                                                              
+                                    </span>
+
+                            <span class="social__item">
+                               
+                               <span class="social-network">
+                                
+                               
+                                  
+                                   <span class="social-item__name">
+                                    <h3>
+                              Project 3
+                            </h3>
+                                </span> 
+                                </span> 
+                                
+                                <span class="social__item-icons-wrapper">
+                            6/8 tasks completed   
+                            
+                                </span>
+                                <span class="social__item-footer social__item-footer-active">
+                                  
+                         <a href="project-page.html" class="connect btn view-social">View project</a>
+                              
+
+                                </span>                              
+                            
+                            </span>
+
+
+                            
+                        </span>
+
+
+                    </div>
+
+      
+
+                   
+
+                </div>
+</div>
+
+
+                </div>
+
+
+            
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+            <div class="container">
+                <p class="m-0 text-muted">&copy; 2020 MikeApp</p>
+                <div class="footer__links-to-app">
+                    <a href=""><img src="images/appstore.png" alt="" /></a>
+                    <a href=""><img src="images/googleplay.png" alt="" /></a>
+                </div>
+            </div>
+        </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-newtask" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <!-- <div class="modal-window__loader modal-window__loader-task">
+            <img src="images/loader.svg" alt="">
+            Creating a new task
+        </div> -->
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">New Project</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form form--lined form--inputbg modal-inner">
+                        <div class="form-group mb-2">
+                            <label>Project name</label>
+                            <input class="form-control" type="text" placeholder="Enter project name">
+                        </div>
+                       
+                       
+                      
+                        
+                        <div class="form-group text-center mt-4 modal-buttons">
+                            <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary btn-wide m-1">Create Project</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <div class="modal fade" id="modal-rename" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <!-- <div class="modal-window__loader modal-window__loader-task">
+            <img src="images/loader.svg" alt="">
+            Creating a new task
+        </div> -->
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Rename Project</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form form--lined form--inputbg modal-inner">
+                        <div class="form-group mb-2">
+                            <label>Project name</label>
+                            <input class="form-control" type="text" placeholder="Enter new project name">
+                        </div>
+                       
+                       
+                      
+                        
+                        <div class="form-group text-center mt-4 modal-buttons">
+                            <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary btn-wide m-1">Rename Project</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" id="modal-newtask--edit" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Edit Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form form--lined form--inputbg modal-inner">
+                        <div class="form-group mb-2">
+                            <label>Task name</label>
+                            <input class="form-control" type="text" placeholder="Enter task name">
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="check-highpriority">
+                            <label class="custom-control-label" for="check-highpriority">High priority</label>
+                        </div>
+                        <div class="form-group">
+                            <label>Task description</label>
+                            <textarea class="form-control form-area" placeholder="Start typing task description..."></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-2">
+                                    <label>Due date</label>
+                                   <div class="datapicker-wrapper">
+                                            <input class="form-control form-date datepicker" type="date" placeholder="yyyy-mm-dd" />
+                                        </div>
+                                    
+
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                    <label>Assign</label>
+                                    <select class="form-control select" name="" id="">
+                                        <option value="" disabled selected>Select assignee</option>
+                                        <option value="">Me</option>
+                                        <option value="">Someone else</option>
+                                        <option value="">A third person</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-1">
+                            <input type="checkbox" class="custom-control-input" id="check-recurring">
+                            <label class="custom-control-label" for="check-recurring">Recurring</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control select" name="" id="">
+                                        <option value="" disabled selected>Select interval</option>
+                                        <option value="">Every day</option>
+                                        <option value="">Every week</option>
+                                        <option value="">Every month</option>
+                                        <option value="">Every year</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control select" name="" id="">
+                                        <option value="" disabled selected>Select project</option>
+                                        <option value="">Project 1</option>
+                                        <option value="">Project 2</option>
+                                        <option value="">Project 3</option>
+                                        <option value="">Project 4</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group text-center mt-4 modal-buttons">
+                            <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary btn-wide m-1">Edit Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--  ----start task view------ -->
+<div class="modal fade" id="modal-task--view" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--view-task">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">View Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form form--lined form--inputbg modal-inner">
+                        <div class="form-group mb-2">
+                            <label>Task name</label>
+                            <input class="form-control" type="text" placeholder="Enter task name" value="My task" readonly>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Task description</label>
+                            <textarea class="form-control form-area" placeholder="Start typing task description..." value="" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ipsam ducimus, facilis numquam itaque sapiente alias. .</textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-2">
+                                    <label>Due date</label>
+                                    
+                                        <div class="datapicker-wrapper">
+                                            <input class="form-control form-date datepicker" type="date" placeholder="yyyy-mm-dd" value="2020.08.08" readonly/>
+                                        </div>                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                    <label>Assign</label>
+                                     <input class="form-control" type="text" placeholder="" value="Me" readonly> 
+                                </div>
+                            </div>
+                        </div>
+
+
+<div class="row">
+                           
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                   
+                                     <input class="form-control" type="text" placeholder="" value="Project 1" readonly> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="check-highpriority" readonly checked>
+                            <label class="custom-control-label" for="check-highpriority">High priority</label>
+                        </div>
+                        
+                        <div class="form-group text-center mt-4 modal-buttons modal-buttons--view">
+                            
+                            <button type="button" class="btn btn-primary btn-wide m-1">Edit Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ----------end task view------------ -->
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>MikeApp</title>
+        <meta name="author" content="Main Street Court" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro:400,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-ui.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/magnific-popup.css">
+    </head>
+
+    <body>
+      
+
+        <!-- Content -->
+        <main class="">
+            <div class="container">
+                <!-- Content Header -->
+                <div class="content-head">
+                    <h1>The Vault</h1>
+                    <!--  <p>Member Name</p> -->
+                </div>
+
+               <div class="valute__empty">
+                   <div class="valute__empty-icon">
+                       <img src="images/vault-empty.png" alt="">
+                   </div>
+                   <div class="valute__empty-text">
+                       This is the place to capture notes, lyric ideas, that melody that just popped into your head, set lists, and other useful stuff. You can add text, record audio, or upload files and photos.
+                   </div>
+                   <div class="valute__empty__items">
+                       <a href="" class="valute__empty__item" data-toggle="modal" data-target="#modal-add-text-note">
+                           <img src="images/vault-btn-write.png" alt="">
+                           <div class="valute__empty__title">
+                               WRITE <br>NOTE
+                           </div>
+                       </a>
+                       <div class="valute__empty__item valute__empty__item--audio">
+                           <img src="images/vault-btn-record.png" alt="">
+                           <div class="valute__empty__title">
+                               RECORD <br> AUDIO
+                           </div>
+                       </div>
+                       <a href="" class="valute__empty__item" data-toggle="modal" data-target="#modal-add-file-note">
+                           <img src="images/vault-btn-attach.png" alt="">
+                           <div class="valute__empty__title">
+                               ATTACH <br> FILE
+                           </div>
+                       </a>
+                       <a href="" class="valute__empty__item" data-toggle="modal" data-target="#modal-add-photo-note">
+                           <img src="images/vault-btn-photo.png" alt="">
+                           <div class="valute__empty__title">
+                               ADD <br>PHOTO
+                           </div>
+                       </a>
+                   </div>
+               </div>
+
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <p class="m-0 text-muted">&copy; 2020 MikeApp</p>
+            </div>
+        </footer>
+
+<!-- --------------start record audio modal-----------------> 
+<div class="record-audio-modal">
+    <div class="record-audio-modal__content">
+        <div class="close">+</div>
+        <div class="record-audio-modal__title">
+            RECORD AUDIO
+        </div>
+        <div class="record-audio-modal__icon">
+            <img src="images/mic.png" alt="" class="">
+
+              
+        </div>
+
+        <div class="record-audio-modal__text">
+            <span class="no-active">Press start to recording...</span>
+            <span class="active">Recording...</span>
+            
+        </div>
+
+        <div class="record-audio-modal__time">
+            00:00/01:00
+        </div>
+        <button class="btn btn-brand btn-record">
+            <span class="start">START</span>
+            <a href="" class="finish" data-toggle="modal" data-target="#modal-add-audio-note">FINISH</a>
+            
+        </button>
+
+
+
+    </div>
+</div>
+<!-- ------------------end record audio modal-------------------- -->
+
+<!-- -----------------------start add text-note popup----------------------- -->
+<div class="modal fade" id="modal-add-text-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--add-link">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                            <div class="form-group">
+                                <label>Note description</label>
+                                <textarea class="form-control form-area" placeholder="Start typing your note..."></textarea>
+
+                                <button class="btn bth--transparent dictate-note">
+
+                                    <span class="active">SPEAC NOW...</span>
+                                    <span class="no-active">DICTATE NOTE</span>
+                                     <img src="images/vault-icon-record-small.png" alt="">
+                                </button>
+                            </div>                                         
+                            
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Add Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" />
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper ">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group">
+    <input type="text" class="form-control pull-right" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------end add text note popup----------------------- -->
+
+
+<!-- -------------------start add photo-note popup----------------------- -->
+<div class="modal fade" id="modal-add-photo-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--add-link">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                             <div class="form-group">
+                                
+
+                                <!-- <div class="browse-file">
+                                    <label>Please select a file to upload</label>
+                                    <input type="file" name="file" id="file" class="inputfile btn-browse-input" />
+<label for="file" class="btn bth--transparent btn-browse">BROWSE FILE</label>   
+                                </div> -->
+<div class="browse-file__title browse-img__title">Please select a picture to upload</div>
+                                <button type="button" class="btn btn-primary btn-wide m-1 new-income__btn add-new__photo browse-file__btn" download>                                     
+                                       <input type="file" name="file" id="file" class="inputfile" />
+<label for="file"> Choose a picture</label>                                   
+                                    </button>
+                      <div class="browse-file__content browse-img__content">
+                         <a href="images/todo.png" class="popup-link browse-file__wrapper">
+                                <img src="images/vault-btn-photo.png" alt="">
+                               image.jpeg
+                                
+                   
+                </a>
+                         
+                          
+                      </div>                        
+                            </div>                                        
+                            
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Add Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" />
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper ">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group">
+    <input type="text" class="form-control pull-right" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------end add photo note popup----------------------- -->
+
+
+<!-- -------------------start add file-note popup----------------------- -->
+<div class="modal fade" id="modal-add-file-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--add-link">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                             <div class="form-group">
+                                
+
+                                <!-- <div class="browse-file">
+                                    <label>Please select a file to upload</label>
+                                    <input type="file" name="file" id="file" class="inputfile btn-browse-input" />
+<label for="file" class="btn bth--transparent btn-browse">BROWSE FILE</label>   
+                                </div> -->
+<div class="browse-file__title browse-doc__title">Please select a file to upload</div>
+                                <button type="button" class="btn btn-primary btn-wide m-1 new-income__btn browse-file__btn add-new-file" download>                                     
+                                       <input type="file" name="file" id="file" class="inputfile" />
+<label for="file"> BROWSE FILE</label>                                   
+                                    </button>
+                      <div class="browse-file__content browse-doc__content">
+                           <a href="images/wof-brief.pdf" class="browse-file__wrapper popup-file-link">
+                                <img src="images/vault-file-pdf.png" alt="">
+                                <span class="note-image-view__title">
+                                    Text-file-name.pdf
+                                </span>
+                                <span class="note-image-view__weight">
+                                    260.5 KB
+                                </span>
+                               
+                                
+                   
+                </a>
+                      </div>                        
+                            </div>                                         
+                            
+                            <div class="form-group text-center mt-4 modal-buttons" >
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Add Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" />
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper ">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group">
+    <input type="text" class="form-control pull-right" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ------------------start add file note popup------------------ -->
+
+
+<!-- -------------------start add audio-note popup----------------------- -->
+<div class="modal fade" id="modal-add-audio-note" tabindex="-1" role="dialog" aria-labelledby="newtask" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog--add-link">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="mikeicon-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="note-content">
+                   <form class="form form--lined form--inputbg">
+                            <div class="note-description-wrapper">
+                           <div class="audio-note__content">
+                    <div class="audio-buttons">
+                    <img src="images/vault-btn-play.png" alt="" class="play">
+                    <img src="images/vault-btn-pause.png" alt="" class="pause">
+                </div>
+                <div class="audio-time">
+                    00:00
+                </div>
+                </div>                                        
+                            
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1" data-dismiss="modal"><a href="vault-empty.html">Cancel</a></button>
+                                <button type="button" class="btn btn-primary btn-wide m-1 add-note-button">Add Note</button>
+                            </div>
+                        </div>
+
+                            <div class="note-title-end-tags">
+                                <div class="form-group mb-2">
+                                <label>Title</label>
+                                <input class="form-control" type="text" placeholder="Enter title" />
+                            </div>
+                            <div class="note-privacy">
+                                <div class="input__checkbox">
+                                    <input type="checkbox" id="note-privacy" class="checkbox-input">
+                                    <label for="note-privacy"></label>
+                                </div>
+                                <label for="note-privacy" class="checkbox-text-label">Public (shared with your group)</label>
+                            </div> 
+                            <div class="form-group tags-label">
+                                <label>TAGS </label><span class="add-tag-icon">+</span>
+
+
+                               
+                                
+                            </div> 
+                            <div class="tag-choosen">
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                    <div class="tag">All <div class="delete-tag">+</div></div>
+                                </div>
+
+    <div class="tags__wrapper ">
+                    <form action="" class="form form--lined form--inputbg modal-inner">
+    <div class="form-group">
+    <input type="text" class="form-control pull-right" id="search" placeholder="Enter your tag or select from the list below">
+</div>
+
+
+<ul id="tag-list">
+    <li class="tag-item"><span>tag 1</span>
+    </li>
+    <li  class="tag-item">test tag
+    </li>
+    <li class="tag-item">my tag
+    </li>
+    <li class="tag-item">some text
+    </li>
+    <li class="tag-item">tag 3
+    </li>
+    <li class="tag-item">tag 4
+    </li>
+</ul>
+<div class="tag-empty">
+    Not found ... <span>+ Create new tag</span>
+</div>
+
+
+</form>
+                </div>
+
+
+
+                            <div class="form-group text-center mt-4 modal-buttons">
+                                <button type="button" class="btn btn-outline btn-wide m-1 cancele-note-button">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-wide m-1">Create Note</button>
+                            </div>
+                            </div>
+                             
+                        </form>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ------------------start add audio note popup------------------ -->
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+         <script src="js/jquery.magnific-popup.min.js"></script>
+         <script>
+      $(document).ready(function(){
+            $("#search").keyup(function(){
+                _this = this;
+                $.each($("#tag-list li"), function() {
+                    if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+                       $(this).hide();
+
+                    else
+                       $(this).show();  
+
+
+                });
+
+
+                 $.each($("#tag-list"), function() {
+                    if($(this, 'li').text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+                       $('.tag-empty').addClass('active');
+                    else
+                       
+                   $('.tag-empty').removeClass('active');
+
+
+                                    
+                });
+
+
+            });
+
+
+          
+        });   
+        </script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/prefixfree.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
